@@ -85,6 +85,12 @@ bool morphologicaloperatorsFlag = false;
  */
 bool gradientsFlag = false;
 
+/*! \var bool YUVBGRFlag
+ *
+ *  This is a flag that tells us if we want to edit with our own yuv bgr
+ */
+bool YUVBGRFlag = false;
+
 /*! \var bool cannyedgeFlag
  *
  *  This is a flag which tells us if we want to apply
@@ -375,16 +381,12 @@ Mat customYUV2BGR(Mat YUV, String mode = "4:4:4") {
             }
             unsigned  char Y1;
             unsigned char Y2;
-            unsigned  char Y3;
-            unsigned char Y4;
             unsigned char U;
             unsigned char V;
-            for (int j = 0; j < cols; j += 2) {
+            for (int j = 0; j < cols; j++) {
 
                 Y1 = YUV.ptr<uchar>(i)[j];
                 Y2 = YUV.ptr<uchar>(i + 1)[j];
-                Y3 = YUV.ptr<uchar>(i)[j + 1];
-                Y4 = YUV.ptr<uchar>(i + 1)[j + 1];
                 if (v_begin == rows) break;
 
                 if (j % 2 == 0) {
@@ -400,14 +402,6 @@ Mat customYUV2BGR(Mat YUV, String mode = "4:4:4") {
                 unsigned char G2 = Y2 - 0.714136 * V - 0.344136 * U + 135.459;
                 unsigned char R2 = Y2 + 1.402 * V - 121.889 * pow(10, -6) * U - 179.456;
 
-                unsigned char B3 = Y3 + 4.06298 * pow(10, -7) * V + 1.772 * U - 226.816;
-                unsigned char G3 = Y3 - 0.714136 * V - 0.344136 * U + 135.459;
-                unsigned char R3 = Y3 + 1.402 * V - 121.889 * pow(10, -6) * U - 179.456;
-
-                unsigned char B4 = Y4 + 4.06298 * pow(10, -7) * V + 1.772 * U - 226.816;
-                unsigned char G4 = Y4 - 0.714136 * V - 0.344136 * U + 135.459;
-                unsigned char R4 = Y4 + 1.402 * V - 121.889 * pow(10, -6) * U - 179.456;
-
                 b_array.ptr<uchar>(i)[j] = B1;
                 g_array.ptr<uchar>(i)[j] = G1;
                 r_array.ptr<uchar>(i)[j] = R1;
@@ -415,14 +409,6 @@ Mat customYUV2BGR(Mat YUV, String mode = "4:4:4") {
                 b_array.ptr<uchar>(i + 1)[j] = B2;
                 g_array.ptr<uchar>(i + 1)[j] = G2;
                 r_array.ptr<uchar>(i + 1)[j] = R2;
-
-                b_array.ptr<uchar>(i)[j + 1] = B3;
-                g_array.ptr<uchar>(i)[j + 1] = G3;
-                r_array.ptr<uchar>(i)[j + 1] = R3;
-
-                b_array.ptr<uchar>(i + 1)[j + 1] = B4;
-                g_array.ptr<uchar>(i + 1)[j + 1] = G4;
-                r_array.ptr<uchar>(i + 1)[j + 1] = R4;
             }
 
         }
@@ -1045,13 +1031,46 @@ int showVideo(VideoCapture inputVideo,int delay) {
             oldFrame.copyTo(frame, detectedEdges);
         }
         //Applying my own YUV
-        else if (false) {}
+        else if (YUVBGRFlag) {
+            char TrackbarYUVType[100];
+            generalSliderMax = 2;
+            sprintf_s(TrackbarYUVType, "YUV\n0-4:4:4\n1-4:2:2\n2-4:2:0 x %d", generalSliderMax);
+            createTrackbar(TrackbarYUVType, "Frame", &generalSlider, generalSliderMax, general_trackbar);
+            general_trackbar(generalSlider, 0);
+            char TrackbarBGRflag[100];
+            general2SliderMax = 1;
+            sprintf_s(TrackbarBGRflag, "BGR?\n0-False\n1-True x %d", general2SliderMax);
+            createTrackbar(TrackbarBGRflag, "Frame", &general2Slider, general2SliderMax, general2_trackbar);
+            general2_trackbar(general2Slider, 0);
+            oldFrame = frame.clone();
+            frame.release();
+            if (general == 0) {
+                frame = customBGR2YUV(oldFrame, "4:4:4");
+                if (general2 == 1) {
+                    oldFrame = frame.clone();
+                    frame.release();
+                    frame = customYUV2BGR(oldFrame, "4:4:4");
+                }
+            }
+            else if (general == 1) {
+                frame = customBGR2YUV(oldFrame, "4:2:2");
+                if (general2 == 1) {
+                    oldFrame = frame.clone();
+                    frame.release();
+                    frame = customYUV2BGR(oldFrame, "4:2:2");
+                }
+            }
+            else {
+                frame = customBGR2YUV(oldFrame, "4:2:0");
+                if (general2 == 1) {
+                    oldFrame = frame.clone();
+                    frame.release();
+                    frame = customYUV2BGR(oldFrame, "4:2:0");
+                }
+            }
+
+        }
         // Display the resulting frame
-        oldFrame = frame.clone();
-        frame = customBGR2YUV(oldFrame, "4:2:2");
-        Mat YUV = frame.clone();
-        frame.release();
-        frame = customYUV2BGR(YUV, "4:2:2");
         imshow("Frame", frame);
         // Press  ESC on keyboard to exit
         char c = (char)waitKey(25);
@@ -1114,6 +1133,7 @@ String menuSpeech() {
     cout << "'h':Get image gradients." << endl;
     cout << "'i':Apply canny edge algorithm." << endl;
     cout << "'l':load a video path." << endl;
+    cout << "'p':personal YUV2BGR and BGR2YUV." << endl;
     cout << "'q':Leave." << endl;
     cout << "Hoption= ";
     String hoption;
@@ -1180,6 +1200,11 @@ void editMenu() {
         cout << "Please give full path to the video file including the video file (example: D:\\videos\\video.mp4): ";
         getline(cin, videoPath);
         cout << videoPath << endl;
+        }
+        else if (hoption == "p") {
+            YUVBGRFlag = true;
+            checkVideo();
+            YUVBGRFlag = false;
         }
         else {
             cout << "Invalid HOPtion!" << endl;
