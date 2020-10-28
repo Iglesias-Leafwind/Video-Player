@@ -340,9 +340,17 @@ Mat customYUV2BGR(Mat YUV, String mode = "4:4:4") {
                     V = YUV.ptr<uchar>(v_row)[v_col++];
                 }
 
-                unsigned char B = Y + 4.06298 * pow(10, -7) * V + 1.772 * U - 226.816;
-                unsigned char G = Y - 0.714136 * V - 0.344136 * U + 135.459;
-                unsigned char R = Y + 1.402 * V - 121.889 * pow(10, -6) * U - 179.456;
+                int B = Y + 1.772 * U - 226.816;
+                int G = Y - 0.344136 * U - 0.714136 * V + 135.459;
+                int R = Y + 1.402 * V - 179.456;
+
+                if (B < 0) B = 0;
+                if (G < 0) G = 0;
+                if (R < 0) R = 0;
+
+                if (B > 255) B = 255;
+                if (G > 255) G = 255;
+                if (R > 255) R = 255;
 
                 bmat.ptr<uchar>(i)[j] = B;
                 gmat.ptr<uchar>(i)[j] = G;
@@ -393,14 +401,29 @@ Mat customYUV2BGR(Mat YUV, String mode = "4:4:4") {
                     U = YUV.ptr<uchar>(u_begin)[u_cols++];
                     V = YUV.ptr<uchar>(v_begin)[v_cols++];
                 }
+                int B1 = Y1 + 1.772 * U - 226.816;
+                int G1 = Y1 - 0.344136 * U - 0.714136 * V + 135.459;
+                int R1 = Y1 + 1.402 * V - 179.456;
 
-                unsigned char B1 = Y1 + 4.06298 * pow(10, -7) * V + 1.772 * U - 226.816;
-                unsigned char G1 = Y1 - 0.714136 * V - 0.344136 * U + 135.459;
-                unsigned char R1 = Y1 + 1.402 * V - 121.889 * pow(10, -6) * U - 179.456;
+                if (B1 < 0) B1 = 0;
+                if (G1 < 0) G1 = 0;
+                if (R1 < 0) R1 = 0;
 
-                unsigned char B2 = Y2 + 4.06298 * pow(10, -7) * V + 1.772 * U - 226.816;
-                unsigned char G2 = Y2 - 0.714136 * V - 0.344136 * U + 135.459;
-                unsigned char R2 = Y2 + 1.402 * V - 121.889 * pow(10, -6) * U - 179.456;
+                if (B1 > 255) B1 = 255;
+                if (G1 > 255) G1 = 255;
+                if (R1 > 255) R1 = 255;
+
+                int B2 = Y2 + 1.772 * U - 226.816;
+                int G2 = Y2 - 0.344136 * U - 0.714136 * V + 135.459;
+                int R2 = Y2 + 1.402 * V - 179.456;
+
+                if (B2 < 0) B2 = 0;
+                if (G2 < 0) G2 = 0;
+                if (R2 < 0) R2 = 0;
+
+                if (B2 > 255) B2 = 255;
+                if (G2 > 255) G2 = 255;
+                if (R2 > 255) R2 = 255;
 
                 b_array.ptr<uchar>(i)[j] = B1;
                 g_array.ptr<uchar>(i)[j] = G1;
@@ -473,9 +496,18 @@ Mat customYUV2BGR(Mat YUV, String mode = "4:4:4") {
                 unsigned char Y = YUV.ptr<Vec3b>(i)[j][0];
                 unsigned char U = YUV.ptr<Vec3b>(i)[j][1];
                 unsigned char V = YUV.ptr<Vec3b>(i)[j][2];
-                unsigned char B = Y + 4.06298 * pow(10, -7) * V + 1.772 * U - 226.816;
-                unsigned char G = Y - 0.714136 * V - 0.344136 * U + 135.459;
-                unsigned char R = Y + 1.402 * V - 121.889 * pow(10, -6) * U - 179.456;
+
+                int B = Y + 1.772                 * U - 226.816;
+                int G = Y - 0.344136 * U - 0.714136 * V + 135.459;
+                int R = Y + 1.402 * V - 179.456;
+                
+                if (B < 0) B = 0;
+                if (G < 0) G = 0;
+                if (R < 0) R = 0;
+
+                if (B > 255) B = 255;
+                if (G > 255) G = 255;
+                if (R > 255) R = 255;
 
                 result.ptr<Vec3b>(i)[j][0] = B;
                 result.ptr<Vec3b>(i)[j][1] = G;
@@ -542,7 +574,7 @@ int showVideo(VideoCapture inputVideo,int delay) {
             else {
                 char TrackbarName[50];
                 sprintf_s(TrackbarName, "Alpha x %d", alphaSliderMax);
-                edit = watermark.clone();
+                resize(watermark, edit, frame.size());
                 oldFrame = frame.clone();
                 frame.release();
                 createTrackbar(TrackbarName, "Frame", &alphaSlider, alphaSliderMax, alpha_trackbar);
@@ -1070,7 +1102,7 @@ int showVideo(VideoCapture inputVideo,int delay) {
             }
 
         }
-        // Display the resulting frame
+        // Display the resulting 
         imshow("Frame", frame);
         // Press  ESC on keyboard to exit
         char c = (char)waitKey(25);
