@@ -104,22 +104,27 @@ bool cannyedgeFlag = false;
  *  This is sets the trackbar max value
  */
 const int alphaSliderMax = 100;
+
 /*! \var int alphaSlider
  *  This is the value inside the slider
  */
 int alphaSlider;
+
 /*! \var double alpha
  * Is one of the values that will be used on the watermark
  */
 double alpha;
+
 /*! \var double beta
  * Is one of the values that will be used on the watermark
  */
 double beta;
+
 /*! \var Mat oldFrame,edit,frame
  *  initializing variables just easier future use
  */
 Mat oldFrame,edit, frame;
+
 /*! \function alpha_trackbar
 * this tracks the watermark intensity
 */
@@ -129,6 +134,7 @@ static void alpha_trackbar(int, void*)
     beta = (1.0 - alpha);
     addWeighted(oldFrame, alpha, edit, beta, 0.0, frame);
 }
+
 float xCoord, yCoord;
 int xSlider, ySlider;
 int xSliderMax, ySliderMax;
@@ -139,6 +145,7 @@ static void xCoord_trackbar(int, void*)
 {
     xCoord = (float)xSlider;
 }
+
 static void ycoord_trackbar(int, void*)
 {
     yCoord = (float)ySlider;
@@ -174,6 +181,15 @@ int general3SliderMax;
 static void general3_trackbar(int, void*)
 {
     general3 = general3Slider;
+}
+
+void resetTrackbars() {
+    yCoord = 0;
+    xCoord = 0;
+    selection = 0;
+    general = 0;
+    general2 = 0;
+    general3 = 0;
 }
 /*! \function customBGR2YUV
 *   
@@ -439,50 +455,6 @@ Mat customYUV2BGR(Mat YUV, String mode = "4:4:4") {
         vector<Mat> channels{ b_array, g_array, r_array };
         merge(channels, result);
         return result;
-        /*
-        Mat bmat(YUV.rows * 2 / 3, YUV.cols, CV_8UC1);
-        Mat gmat(YUV.rows * 2 / 3, YUV.cols, CV_8UC1);
-        Mat rmat(YUV.rows * 2 / 3, YUV.cols, CV_8UC1);
-
-        int u_row = YUV.rows * 2 / 3;
-        int u_col = 0;
-        int v_row = YUV.rows * 1 / 6;
-        int v_col = 0;
-        unsigned char Y;
-        unsigned char U;
-        unsigned char V;
-        for (int i = 0; i < YUV.rows * 2 / 3; i++)
-        {
-            if (u_col == YUV.cols) {
-                u_row++;
-                u_col = 0;
-            }
-            if (v_col == YUV.cols) {
-                v_row++;
-                v_col = 0;
-            }
-
-            for (int j = 0; j < YUV.cols; j++)
-            {
-                Y = YUV.ptr<uchar>(i)[j];
-                if (i % 2 == 0 and j % 2 == 0) {
-                    U = YUV.ptr<uchar>(u_row)[u_col++];
-                    V = YUV.ptr<uchar>(v_row)[v_col++];
-                }
-                unsigned char B = (298 * (Y - 16) + 516 * (U - 128) + 128) >> 8;
-                unsigned char G = (298 * (Y - 16) - 100 * (U - 128) - 208 * (V - 128) + 128) >> 8;
-                unsigned char R = (298 * (Y - 16) + 409 * (V - 128) + 128) >> 8;
-
-                bmat.ptr<uchar>(i)[j] = B;
-                gmat.ptr<uchar>(i)[j] = G;
-                rmat.ptr<uchar>(i)[j] = R;
-            }
-        }
-        std::vector<Mat> channels{ bmat, gmat, rmat };
-
-        // Create the output matrix
-        merge(channels, result);
-        return result;*/
     }
     else {
 
@@ -517,8 +489,6 @@ Mat customYUV2BGR(Mat YUV, String mode = "4:4:4") {
         return result;
     }
 }
-
-
 
 /*! \function showVideo
 *   
@@ -874,6 +844,7 @@ int showVideo(VideoCapture inputVideo,int delay) {
             cvtColor(imgResult, bw, COLOR_BGR2GRAY);
             threshold(bw, bw, 40, 255, THRESH_BINARY | THRESH_OTSU);
             frame.release();
+            //AfterSegmentational algorithm
 
             char TrackbarSelection[100];
             selectionSliderMax = 6;
@@ -1112,6 +1083,7 @@ int showVideo(VideoCapture inputVideo,int delay) {
             continue;
         }
     }
+    resetTrackbars();
     destroyWindow("Frame");
     destroyWindow("Red");
     destroyWindow("Blue");
