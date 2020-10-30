@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['frame_11',['frame',['../_video_01_player_8cpp.html#a0ddf2529249193d0bb1753becba7485b',1,'Video Player.cpp']]]
+  ['readbit_6',['readbit',['../class_bit_stream.html#a4accc111a5c1a01d33449549d8cb7507',1,'BitStream']]],
+  ['readnbits_7',['readNbits',['../class_bit_stream.html#ae396d30bc49c66b58756056a08cd9a66',1,'BitStream']]]
 ];

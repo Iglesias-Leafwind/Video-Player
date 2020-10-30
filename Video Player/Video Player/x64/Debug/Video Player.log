@@ -1,25 +1,2 @@
-﻿  Video Player.cpp
-D:\Desktop\Universidade\CSLP\projeto\Video Player\Video Player\Video Player.cpp(223,33): warning C4244: 'initializing': conversion from 'double' to 'unsigned char', possible loss of data
-D:\Desktop\Universidade\CSLP\projeto\Video Player\Video Player\Video Player.cpp(224,33): warning C4244: 'initializing': conversion from 'double' to 'unsigned char', possible loss of data
-D:\Desktop\Universidade\CSLP\projeto\Video Player\Video Player\Video Player.cpp(225,33): warning C4244: 'initializing': conversion from 'double' to 'unsigned char', possible loss of data
-D:\Desktop\Universidade\CSLP\projeto\Video Player\Video Player\Video Player.cpp(261,33): warning C4244: 'initializing': conversion from 'double' to 'unsigned char', possible loss of data
-D:\Desktop\Universidade\CSLP\projeto\Video Player\Video Player\Video Player.cpp(262,33): warning C4244: 'initializing': conversion from 'double' to 'unsigned char', possible loss of data
-D:\Desktop\Universidade\CSLP\projeto\Video Player\Video Player\Video Player.cpp(263,33): warning C4244: 'initializing': conversion from 'double' to 'unsigned char', possible loss of data
-D:\Desktop\Universidade\CSLP\projeto\Video Player\Video Player\Video Player.cpp(288,33): warning C4244: 'initializing': conversion from 'double' to 'unsigned char', possible loss of data
-D:\Desktop\Universidade\CSLP\projeto\Video Player\Video Player\Video Player.cpp(289,33): warning C4244: 'initializing': conversion from 'double' to 'unsigned char', possible loss of data
-D:\Desktop\Universidade\CSLP\projeto\Video Player\Video Player\Video Player.cpp(290,33): warning C4244: 'initializing': conversion from 'double' to 'unsigned char', possible loss of data
-D:\Desktop\Universidade\CSLP\projeto\Video Player\Video Player\Video Player.cpp(351,23): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-D:\Desktop\Universidade\CSLP\projeto\Video Player\Video Player\Video Player.cpp(352,23): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-D:\Desktop\Universidade\CSLP\projeto\Video Player\Video Player\Video Player.cpp(353,23): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-D:\Desktop\Universidade\CSLP\projeto\Video Player\Video Player\Video Player.cpp(412,24): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-D:\Desktop\Universidade\CSLP\projeto\Video Player\Video Player\Video Player.cpp(413,24): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-D:\Desktop\Universidade\CSLP\projeto\Video Player\Video Player\Video Player.cpp(414,24): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-D:\Desktop\Universidade\CSLP\projeto\Video Player\Video Player\Video Player.cpp(424,24): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-D:\Desktop\Universidade\CSLP\projeto\Video Player\Video Player\Video Player.cpp(425,24): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-D:\Desktop\Universidade\CSLP\projeto\Video Player\Video Player\Video Player.cpp(426,24): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-D:\Desktop\Universidade\CSLP\projeto\Video Player\Video Player\Video Player.cpp(464,23): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-D:\Desktop\Universidade\CSLP\projeto\Video Player\Video Player\Video Player.cpp(465,23): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-D:\Desktop\Universidade\CSLP\projeto\Video Player\Video Player\Video Player.cpp(466,23): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-D:\Desktop\Universidade\CSLP\projeto\Video Player\Video Player\Video Player.cpp(1105,21): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-D:\Desktop\Universidade\CSLP\projeto\Video Player\Video Player\Video Player.cpp(1236,29): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+﻿  BitStream.cpp
   Video Player.vcxproj -> D:\Desktop\Universidade\CSLP\projeto\Video Player\x64\Debug\Video Player.exe

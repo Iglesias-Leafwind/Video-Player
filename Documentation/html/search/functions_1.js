@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['editmenu_48',['editMenu',['../_video_01_player_8cpp.html#a6f67e4b2ff8da23e95b096e6f45de01d',1,'Video Player.cpp']]]
+  ['close_13',['close',['../class_bit_stream.html#a17a01273ccc12e3c0a1045a010736a8e',1,'BitStream']]]
 ];
