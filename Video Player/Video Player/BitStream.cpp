@@ -3,8 +3,6 @@
 #include <stdio.h>
 #include <fstream>
 
-#include "opencv2/opencv.hpp"
-#include <opencv2/videoio.hpp>
 
 #include <bitset>
 
@@ -171,11 +169,12 @@ void BitStream::write() {
     current_bit = 0;
     currentBitStream = 0;
 }
-/*Change the name of this class to main to test
-*   after changing the name of video player main
-*/
 
-int main()
+
+/*Change the name of this file to "main" to test
+*   after changing the name of video player file "main"
+*/
+int tests()
 {
     BitStream bs("binary.bin","w");
     /*result1*/
@@ -209,8 +208,9 @@ int main()
     cout << (int)bs2.readbit();
     cout << (int)bs2.readbit();
     cout << (int)bs2.readbit()<< endl;
-    cout << "0000 0000 = " << (int)bs2.readNbits(8) << endl;
-    cout << "1111 1111 = " << (int)bs2.readNbits(8) << endl;
-    cout << "1111 1110 = " << (int)bs2.readNbits(10) << endl;
+    cout << "0000 0000 1111 1111 = " << (int)bs2.readNbits(16) << endl;
+    cout << "0011 1111 10 = " << (int)bs2.readNbits(10) << endl;
+    cout << "0000 00 = " << (int)bs2.readNbits(6) << endl;
     cout << "1100 0000 = " << (int)bs2.readNbits(8) << endl;
+    return 0;
 }
