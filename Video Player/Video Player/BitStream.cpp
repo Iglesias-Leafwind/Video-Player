@@ -35,8 +35,8 @@ public:
 
     /*! BitStream(String file_path, string ReadorWrite)
     * this is the bitstream constructor where it choses through ReadorWrite if we want to read or write
-    * if we want to read we open the file through file_path and initialize ifstream input
-    * if we want to write we create a file through file_path and initialize ofstream output
+    * "r" - if we want to read we open the file through file_path and initialize ifstream input
+    * "w" - if we want to write we create a file through file_path and initialize ofstream output
     */
     BitStream(string file_path, string ReadorWrite);
     /*! unsinged char readbit()
@@ -62,6 +62,7 @@ public:
     void write();
     /*! void close()
     * closes input and output streams when the program finishes the usage
+    * this is needed always after finishing using.
     */
     void close();
 };
@@ -172,7 +173,25 @@ void BitStream::write() {
 /*Change the name of this class to main to test
 *   after changing the name of video player main
 */
-int test()
+
+/*  
+    0000 0000 
+    0000 0001
+    0000 0010
+    0000 0101
+    1010 0000
+    write on file
+*/
+
+/*
+    0000 0000
+    0000 0001
+    write
+    1000 0000
+    write on file
+*/
+
+int main()
 {
     BitStream bs("binary.bin","w");
     bs.writebit(0);
@@ -187,7 +206,8 @@ int test()
     bs.writebit(0);
     bs.writebit(1);
     bs.write();
-    bs.writeNbits(4,8);
+    bs.writeNbits(255,7);
+    bs.write();
     bs.writebit(1);
     bs.writebit(1);
     bs.close();

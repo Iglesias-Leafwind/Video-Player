@@ -1218,7 +1218,7 @@ void editMenu() {
     }
 }
 
-int main(int argc, char** argv)
+int videoPlayerMain(int argc, char** argv)
 {
     cout << "OpenCV version: " << CV_VERSION << endl;
     cout << "Welcome to my video player write 'h' to get all options available: ";
