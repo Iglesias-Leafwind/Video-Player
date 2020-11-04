@@ -48,10 +48,10 @@ public:
     * this uchar if its bits are all 0 then it will write bit 0 if it is anything else it will write 1
     */
     void writebit(unsigned char bit);
-    /*! vector<int> readNbits(int Nbits)
-    *  reads Nbits from the file using readbit() function and returns a vector with all bits
+    /*! unsigned char  readNbits(int Nbits)
+    *  reads Nbits from the file using readbit() function and returns a unsigned char with the result
     */
-    vector<int> readNbits(int Nbits);
+    unsigned char readNbits(int Nbits);
     /*! void writeNbits(int N, int Nbits)
     * writes N with Nbits on the file
     */
@@ -102,18 +102,19 @@ void BitStream::writebit(unsigned char bit) {
     }
     
 }
-vector<int> BitStream::readNbits(int Nbits) {
+unsigned char BitStream::readNbits(int Nbits) {
     if (input.fail()) {
         throw runtime_error("Could not open file");
     }
-    vector<int> bits;
-    int i = 0;
+    unsigned long result = (unsigned long)readbit();
+    int i = 1;
     while (i != Nbits) {
-        int bit = (int) readbit();
-        bits.push_back(bit);
+        result = result << 1;
+        unsigned long bit = (unsigned long) readbit();
+        result = result + bit;
         i++;
     }
-    return bits;
+    return (unsigned char) result;
 }
 void BitStream::writeNbits(int N, int Nbits) {
     if (output.fail()) {
@@ -174,44 +175,32 @@ void BitStream::write() {
 *   after changing the name of video player main
 */
 
-/*  
-    0000 0000 
-    0000 0001
-    0000 0010
-    0000 0101
-    1010 0000
-    write on file
-*/
-
-/*
-    0000 0000
-    0000 0001
-    write
-    1000 0000
-    write on file
-*/
-
 int main()
 {
     BitStream bs("binary.bin","w");
+    /*result1*/
     bs.writebit(0);
     bs.writebit(0);
     bs.writebit(0);
     bs.writebit(0);
+    
     bs.writebit(0);
     bs.writebit(0);
     bs.writebit(0);
     bs.writebit(1);
-
-    bs.writebit(0);
-    bs.writebit(1);
+    /*result2*/
+    bs.writeNbits(255,16);
+    /*result3*/
+    bs.writeNbits(254,10);
     bs.write();
-    bs.writeNbits(255,7);
-    bs.write();
+    /*result4*/
     bs.writebit(1);
     bs.writebit(1);
     bs.close();
+
     BitStream bs2("binary.bin", "r");
+    /*results*/
+    cout << "result1:";
     cout << (int)bs2.readbit();
     cout << (int)bs2.readbit();
     cout << (int)bs2.readbit();
@@ -220,30 +209,8 @@ int main()
     cout << (int)bs2.readbit();
     cout << (int)bs2.readbit();
     cout << (int)bs2.readbit()<< endl;
-    vector<int> lmao = bs2.readNbits(8);
-    cout << "myvector contains:";
-    for (int i = 0; i < lmao.size(); i++){
-        cout << lmao.at(i);
-        if (i == 3)
-            cout << " ";
-    }
-    cout << '\n';
-
-    lmao = bs2.readNbits(8);
-    cout << "my2vector contains:";
-    for (int i = 0; i < lmao.size(); i++) {
-        cout << lmao.at(i);
-        if (i == 3)
-            cout << " ";
-    }
-    cout << '\n';
-
-    lmao = bs2.readNbits(8);
-    cout << "my3vector contains:";
-    for (int i = 0; i < lmao.size(); i++) {
-        cout << lmao.at(i);
-        if (i == 3)
-            cout << " ";
-    }
-    cout << '\n';
+    cout << "0000 0000 = " << (int)bs2.readNbits(8) << endl;
+    cout << "1111 1111 = " << (int)bs2.readNbits(8) << endl;
+    cout << "1111 1110 = " << (int)bs2.readNbits(10) << endl;
+    cout << "1100 0000 = " << (int)bs2.readNbits(8) << endl;
 }
