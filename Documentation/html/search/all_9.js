@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['segmentationalgorithmflag_29',['segmentationalgorithmFlag',['../_video_01_player_8cpp.html#a88cf591c00b5aeec3f2e80556d021338',1,'Video Player.cpp']]],
-  ['selection_30',['selection',['../_video_01_player_8cpp.html#ad4174319b419e07ce037d1ed891595d8',1,'Video Player.cpp']]],
-  ['selectionslider_31',['selectionSlider',['../_video_01_player_8cpp.html#ad786496a8f6daf7695b75321f1a41a8a',1,'Video Player.cpp']]],
-  ['selectionslidermax_32',['selectionSliderMax',['../_video_01_player_8cpp.html#a8ff5d8da62b4488239343713e402ca3d',1,'Video Player.cpp']]],
-  ['showvideo_33',['showVideo',['../_video_01_player_8cpp.html#a5fb4696151c782051bfc7150fd19cf61',1,'Video Player.cpp']]]
+  ['m_36',['m',['../class_golomb.html#aea433fe3049440988ad1fa1a5eb536a3',1,'Golomb']]],
+  ['main_37',['main',['../_golomb_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'Golomb.cpp']]],
+  ['menuspeech_38',['menuSpeech',['../_video_01_player_8cpp.html#a41f9d2013d2bec1e7795cfff6a84580a',1,'Video Player.cpp']]],
+  ['morphologicaloperatorsflag_39',['morphologicaloperatorsFlag',['../_video_01_player_8cpp.html#a4992dcf820a77f2e6c95ff9e880590ad',1,'Video Player.cpp']]]
 ];

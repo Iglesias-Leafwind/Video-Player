@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['videopath_79',['videoPath',['../_video_01_player_8cpp.html#a0df2acae8a5514d1b3128895fa6138f3',1,'Video Player.cpp']]]
+  ['segmentationalgorithmflag_120',['segmentationalgorithmFlag',['../_video_01_player_8cpp.html#a88cf591c00b5aeec3f2e80556d021338',1,'Video Player.cpp']]],
+  ['selection_121',['selection',['../_video_01_player_8cpp.html#ad4174319b419e07ce037d1ed891595d8',1,'Video Player.cpp']]],
+  ['selectionslider_122',['selectionSlider',['../_video_01_player_8cpp.html#ad786496a8f6daf7695b75321f1a41a8a',1,'Video Player.cpp']]],
+  ['selectionslidermax_123',['selectionSliderMax',['../_video_01_player_8cpp.html#a8ff5d8da62b4488239343713e402ca3d',1,'Video Player.cpp']]]
 ];

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['readbit_14',['readbit',['../class_bit_stream.html#a4accc111a5c1a01d33449549d8cb7507',1,'BitStream']]],
-  ['readnbits_15',['readNbits',['../class_bit_stream.html#ae396d30bc49c66b58756056a08cd9a66',1,'BitStream']]]
+  ['decode_76',['decode',['../class_golomb.html#a4fde415982072dc9a8f5cb652764e85e',1,'Golomb']]]
 ];

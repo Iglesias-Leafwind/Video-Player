@@ -56,6 +56,7 @@ public:
     void writeNbits(int N, int Nbits);
     /*! void write()
     * writes everyrthing that is saved in the buffer
+    *  This isn't needed it is only a formality.
     */
     void write();
     /*! void close()

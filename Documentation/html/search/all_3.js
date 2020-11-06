@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['output_5',['output',['../class_bit_stream.html#acf094c19e2a88e868894593ced7d0733',1,'BitStream']]]
+  ['decode_15',['decode',['../class_golomb.html#a4fde415982072dc9a8f5cb652764e85e',1,'Golomb']]]
 ];

@@ -79,6 +79,8 @@ $(function() {
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a668bb168846a9906cacdfd15e48a0d58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_video_01_player_8cpp.html#a668bb168846a9906cacdfd15e48a0d58">resetTrackbars</a> ()</td></tr>
+<tr class="separator:a668bb168846a9906cacdfd15e48a0d58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d759d4abec4e24a8b1811845090bf1a"><td class="memItemLeft" align="right" valign="top">Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_video_01_player_8cpp.html#a1d759d4abec4e24a8b1811845090bf1a">customBGR2YUV</a> (Mat BGR, String mode=&quot;4:4:4&quot;)</td></tr>
 <tr class="separator:a1d759d4abec4e24a8b1811845090bf1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80270293a9c36ba442c5fda21f00c6d0"><td class="memItemLeft" align="right" valign="top">Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_video_01_player_8cpp.html#a80270293a9c36ba442c5fda21f00c6d0">customYUV2BGR</a> (Mat YUV, String mode=&quot;4:4:4&quot;)</td></tr>
@@ -91,8 +93,8 @@ Functions</h2></td></tr>
 <tr class="separator:a41f9d2013d2bec1e7795cfff6a84580a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f67e4b2ff8da23e95b096e6f45de01d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_video_01_player_8cpp.html#a6f67e4b2ff8da23e95b096e6f45de01d">editMenu</a> ()</td></tr>
 <tr class="separator:a6f67e4b2ff8da23e95b096e6f45de01d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_video_01_player_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
-<tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a537b3655b0a290378ff08ab55fe979"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_video_01_player_8cpp.html#a7a537b3655b0a290378ff08ab55fe979">videoPlayerMain</a> (int argc, char **argv)</td></tr>
+<tr class="separator:a7a537b3655b0a290378ff08ab55fe979"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -116,6 +118,8 @@ Variables</h2></td></tr>
 <tr class="separator:a4992dcf820a77f2e6c95ff9e880590ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82eca8156b1086640b039ed70bd94bac"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_video_01_player_8cpp.html#a82eca8156b1086640b039ed70bd94bac">gradientsFlag</a> = false</td></tr>
 <tr class="separator:a82eca8156b1086640b039ed70bd94bac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ca730a907281d788f228cbf5dc89cbb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_video_01_player_8cpp.html#a6ca730a907281d788f228cbf5dc89cbb">YUVBGRFlag</a> = false</td></tr>
+<tr class="separator:a6ca730a907281d788f228cbf5dc89cbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef70b83c21a08506182e49e965c1964d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_video_01_player_8cpp.html#aef70b83c21a08506182e49e965c1964d">cannyedgeFlag</a> = false</td></tr>
 <tr class="separator:aef70b83c21a08506182e49e965c1964d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af58c0ea9db3a9bb320efee4979b5aa0a"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_video_01_player_8cpp.html#af58c0ea9db3a9bb320efee4979b5aa0a">alphaSliderMax</a> = 100</td></tr>
@@ -269,34 +273,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a3c04138a5bfe5d72780bb7e82a18e627"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3c04138a5bfe5d72780bb7e82a18e627">&#9670;&nbsp;</a></span>main()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int main </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>argc</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char **&#160;</td>
-          <td class="paramname"><em>argv</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a41f9d2013d2bec1e7795cfff6a84580a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a41f9d2013d2bec1e7795cfff6a84580a">&#9670;&nbsp;</a></span>menuSpeech()</h2>
 
@@ -312,6 +288,23 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>\function menuSpeech prints all available HOPtions </p>
+
+</div>
+</div>
+<a id="a668bb168846a9906cacdfd15e48a0d58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a668bb168846a9906cacdfd15e48a0d58">&#9670;&nbsp;</a></span>resetTrackbars()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void resetTrackbars </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -342,6 +335,34 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>\function showVideo</p>
 <p>this function accepts a video input and shows the video with the proper edit made in the menu </p>
+
+</div>
+</div>
+<a id="a7a537b3655b0a290378ff08ab55fe979"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a537b3655b0a290378ff08ab55fe979">&#9670;&nbsp;</a></span>videoPlayerMain()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int videoPlayerMain </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>argv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -863,6 +884,21 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6ca730a907281d788f228cbf5dc89cbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ca730a907281d788f228cbf5dc89cbb">&#9670;&nbsp;</a></span>YUVBGRFlag</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool YUVBGRFlag = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This is a flag that tells us if we want to edit with our own yuv bgr </p>
 
 </div>
 </div>

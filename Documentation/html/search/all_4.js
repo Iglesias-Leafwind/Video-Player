@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['readbit_6',['readbit',['../class_bit_stream.html#a4accc111a5c1a01d33449549d8cb7507',1,'BitStream']]],
-  ['readnbits_7',['readNbits',['../class_bit_stream.html#ae396d30bc49c66b58756056a08cd9a66',1,'BitStream']]]
+  ['edit_16',['edit',['../_video_01_player_8cpp.html#a31b069a1af39fe963ef1f3ef8a4296be',1,'Video Player.cpp']]],
+  ['editmenu_17',['editMenu',['../_video_01_player_8cpp.html#a6f67e4b2ff8da23e95b096e6f45de01d',1,'Video Player.cpp']]],
+  ['encode_18',['encode',['../class_golomb.html#a704c79964d9eebe53a9987db96bdea2d',1,'Golomb']]]
 ];

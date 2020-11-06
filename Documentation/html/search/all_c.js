@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['xcoord_38',['xCoord',['../_video_01_player_8cpp.html#a5e61647f5d132c1e7bf4f5391a06faac',1,'Video Player.cpp']]],
-  ['xslider_39',['xSlider',['../_video_01_player_8cpp.html#a43fe891d1fd8043a4705ed9a803233ab',1,'Video Player.cpp']]],
-  ['xslidermax_40',['xSliderMax',['../_video_01_player_8cpp.html#a5b7c3ee99ecf99a83b1a10ff823bbae4',1,'Video Player.cpp']]]
+  ['segmentationalgorithmflag_45',['segmentationalgorithmFlag',['../_video_01_player_8cpp.html#a88cf591c00b5aeec3f2e80556d021338',1,'Video Player.cpp']]],
+  ['selection_46',['selection',['../_video_01_player_8cpp.html#ad4174319b419e07ce037d1ed891595d8',1,'Video Player.cpp']]],
+  ['selectionslider_47',['selectionSlider',['../_video_01_player_8cpp.html#ad786496a8f6daf7695b75321f1a41a8a',1,'Video Player.cpp']]],
+  ['selectionslidermax_48',['selectionSliderMax',['../_video_01_player_8cpp.html#a8ff5d8da62b4488239343713e402ca3d',1,'Video Player.cpp']]],
+  ['showvideo_49',['showVideo',['../_video_01_player_8cpp.html#a5fb4696151c782051bfc7150fd19cf61',1,'Video Player.cpp']]]
 ];
