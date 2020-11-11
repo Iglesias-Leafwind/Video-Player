@@ -3,125 +3,92 @@
 
 #include "opencv2/opencv.hpp"
 #include <opencv2/videoio.hpp>
-
+#include "BitStream.h"
+#include "Golomb.h"
 using namespace std;
 
-/*! class Golomb
-* this class is used to encode and decode using Golomb method
-*/
-class Golomb {
-public:
-	/*! int b
-	*	b is the value used for the numbewr of bites that we are going to user
-	*	on the remainer
-	*/
-	int b;
-	/*! int m
-	*	m is the value used for the golomb encoding / decoding
-	*/
-	int m;
-	/*! Golomb(int m);
-	*	this constructor is used to specify which value "m" you will use for Golomb encoding / decoding
-	*/
-	Golomb(int m);
-	/*! signed int encode(signed int encoding);
-	*	this function encodes a signed int (encoding) and returns a signed int (encoded)
-	*/
-	signed int encode(signed int encoding);
-	/*! signed int decode(signed int decoding);
-	*	this function decodes a signed int (decoding) and returns a signed int (decoded)
-	*/
-	signed int decode(signed int decoding);
-};
-
-Golomb::Golomb(int m) {
+Golomb::Golomb(string path, int m, string readorwrite) {
+	this->path = path;
 	this->m = m;
 	this->b = ceil(log2(m));
+	this->ReadWrite.open(path,readorwrite);
 }
 
-signed int Golomb::encode(signed int encoding) {
-	int q = floor(encoding / m);
-	int r = encoding - q * m;
-	/*this is the value we are going to return*/
-	signed int retrn = 0;
+void Golomb::encode(signed int encoding) {
+	if (encoding < 0) {
+		encoding = (encoding * (-2)) - 1;
+	}
+	else {
+		encoding = (encoding * 2);
+	}
+	int q = encoding / m;
+	int r = encoding - (q * m);
+	
 	/*here we will add the quotient part of the algorithm*/
 	for (int ones = 0; ones < q; ones++) {
-		retrn = retrn << 1;
-		retrn |= 0x01;
+		ReadWrite.writebit(1);
 	}
-	retrn = retrn << 1;
-	retrn |= 0x00;
-
+	ReadWrite.writebit(0);
+	//resto < 2^b -m (b-1 bits) e r = r
 	if (r < ((int)pow(2, b) - m)) {
-		for (int bit = (b - 2); bit >= 0 ;bit--) {
-			retrn = retrn << 1;
-			retrn |= ((r >> bit) & 0x01);
-		}
+		ReadWrite.writeNbits(r, b-1);
 	}
+	//resto >= 2^b -m (b bits) e r = r + 2^b-m
 	else if (r >= ((int)pow(2, b) - m)) {
-		for (int bit = (b-1); bit >= 0 ;bit--) {
-			retrn = retrn << 1;
-			retrn |= (((r + (int)pow(2, b) - m) >> bit) & 0x01);
-		}
+		r = (r + (int)pow(2, b) - m);
+		ReadWrite.writeNbits(r, b);
 	}
 	else {
 		cout << "You did it!!! BUT HOW?" << endl;
 	}
-	return retrn;
 };
 
-signed int Golomb::decode(signed int decoding) {
+signed int Golomb::decode() {
 	//if we read bit with position b and it is 1
 	// then we are in r and we need to read from 0 to b-2 for r.
-	signed int q = 0;
-	signed int r = 0;
-	signed int retrn;
-	if (((decoding >> b) & 0x01) or decoding < b){
-		//R analysis
-		for (int bit = b - 2; bit >= 0; bit--) {
-			r = r << 1;
-			r |= ((decoding >> bit) & 0x01);
-		}
-		//Q analysis
-		if (decoding >= b) {
-			q++;
-		}
-		while (((decoding >> b + q) & 0x01)) {
-			q++;
-		}
-		q = m * q;
+	int q = -1;
+	signed int retrn = 0;
+	//Q analysis
+	unsigned char current_bit = -1;
+	while(current_bit != 0x00) {
+		q++;
+		current_bit = ReadWrite.readbit();
 	}
-	
-	//if we read bit with position b and it is 0
-	// then we are in (r+2^b-m)	and we need to read from 0 to b-1.
-	else {
-		//R analysis
-		for (int bit = b - 1; bit >= 0; bit--) {
-			r = r << 1;
-			r |= ((decoding >> bit) & 0x01);
-		}
-		r = (r - (int)pow(2, b) + m);
-		//Q analysis
-		while (((decoding >> b+1 + q) & 0x01)) {
-			q++;
-		}
-		q = m * q;
-	}
-	retrn = q + r;
-	return (signed int) retrn;
-};
+	//R analysis
+	int r = (int) ReadWrite.readNbits(b - 1);
 
-int main() {
-	cout << "Test with m = 5 from 0 to 100: " << endl;
-	int m = 5;
-	Golomb a(m);
-	for (signed int i = 0; i < 100; i++) {
-		cout << i << " :encode: " << a.encode(i) << " :decode: " << a.decode(a.encode(i)) << endl;
+	if (r >= ((int)pow(2, b) - m)) {
+		// then r is formula (R + (int)pow(2, b) - m)
+		r = r << 1;
+		r = r + ReadWrite.readbit();
+		r = r - (int)pow(2, b) + m;
 	}
-	cout << "Test with m = 15 from 0 to 255: " << endl;
-	m = 15;
-	Golomb b(m);
-	for (signed int i = 0; i < 255; i++) {
-		cout << i << " :encode: " << b.encode(i) << " :decode: " << b.decode(b.encode(i)) << endl;
+
+	retrn = q * m + r;
+	if ((retrn % 2) == 0) {
+		retrn = retrn / 2;
+	}
+	else {
+		retrn = (retrn + 1) / (-2);
+	}
+	return retrn;
+};
+void Golomb::turnaround() {
+	if (ReadWrite.readwrite) {
+		ReadWrite.open(path, "w");
+	}
+	else {
+		ReadWrite.open(path, "r");
+	}
+};
+int main() {
+	cout << "Test with m = 5 from -255 to 255: " << endl;
+	int m = 5;
+	Golomb a("golomb.bin",m,"w");
+	for (signed int i = -255; i < 255; i++) {
+		a.encode(i);
+		a.turnaround();
+		cout << " - " << i << " :decode: " << a.decode() << endl;
+		a.turnaround();
 	}
 }

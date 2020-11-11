@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['segmentationalgorithmflag_45',['segmentationalgorithmFlag',['../_video_01_player_8cpp.html#a88cf591c00b5aeec3f2e80556d021338',1,'Video Player.cpp']]],
-  ['selection_46',['selection',['../_video_01_player_8cpp.html#ad4174319b419e07ce037d1ed891595d8',1,'Video Player.cpp']]],
-  ['selectionslider_47',['selectionSlider',['../_video_01_player_8cpp.html#ad786496a8f6daf7695b75321f1a41a8a',1,'Video Player.cpp']]],
-  ['selectionslidermax_48',['selectionSliderMax',['../_video_01_player_8cpp.html#a8ff5d8da62b4488239343713e402ca3d',1,'Video Player.cpp']]],
-  ['showvideo_49',['showVideo',['../_video_01_player_8cpp.html#a5fb4696151c782051bfc7150fd19cf61',1,'Video Player.cpp']]]
+  ['readbit_46',['readbit',['../class_bit_stream.html#a4accc111a5c1a01d33449549d8cb7507',1,'BitStream']]],
+  ['readnbits_47',['readNbits',['../class_bit_stream.html#a04883bf64d645907c84e986e427dc800',1,'BitStream']]],
+  ['readwrite_48',['readwrite',['../class_bit_stream.html#ad65a04094b3a4c0874d1cf1110e1d707',1,'BitStream::readwrite()'],['../class_golomb.html#a52c719b263548f1f71c44a0df49473b3',1,'Golomb::ReadWrite()']]],
+  ['resettrackbars_49',['resetTrackbars',['../_video_01_player_8cpp.html#a668bb168846a9906cacdfd15e48a0d58',1,'Video Player.cpp']]]
 ];

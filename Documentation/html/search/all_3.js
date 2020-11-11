@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['decode_15',['decode',['../class_golomb.html#a4fde415982072dc9a8f5cb652764e85e',1,'Golomb']]]
+  ['decode_16',['decode',['../class_golomb.html#ae70834fae7d66c98ad8223468c7d78df',1,'Golomb']]]
 ];
