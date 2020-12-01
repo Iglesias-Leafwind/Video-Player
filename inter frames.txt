@@ -1,0 +1,5 @@
+golombValue = pixelFrameT - pixelMaisProximoDoFrameTApartirDoAnterior
+bdf (dx,dy) = bt - best t-1
+
+bt (b(dxdy) + df)
+

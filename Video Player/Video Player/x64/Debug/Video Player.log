@@ -1,2 +1,6 @@
-﻿  BitStream.cpp
+﻿  Predictor.cpp
+D:\Desktop\Universidade\CSLP\projeto\Video Player\Video Player\Predictor.cpp(397,11): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+D:\Desktop\Universidade\CSLP\projeto\Video Player\Video Player\Predictor.cpp(398,19): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+D:\Desktop\Universidade\CSLP\projeto\Video Player\Video Player\Predictor.cpp(399,20): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+D:\Desktop\Universidade\CSLP\projeto\Video Player\Video Player\Predictor.cpp(400,14): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
   Video Player.vcxproj -> D:\Desktop\Universidade\CSLP\projeto\Video Player\x64\Debug\Video Player.exe

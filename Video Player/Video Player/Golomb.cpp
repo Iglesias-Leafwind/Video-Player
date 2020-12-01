@@ -7,13 +7,19 @@
 #include "Golomb.h"
 using namespace std;
 
+Golomb::Golomb() {
+}
+
 Golomb::Golomb(string path, int m, string readorwrite) {
 	this->path = path;
 	this->m = m;
 	this->b = ceil(log2(m));
 	this->ReadWrite.open(path,readorwrite);
 }
-
+void Golomb::changeM(int m) {
+	this->m = m;
+	this->b = ceil(log2(m));
+}
 void Golomb::encode(signed int encoding) {
 	if (encoding < 0) {
 		encoding = (encoding * (-2)) - 1;
@@ -81,7 +87,7 @@ void Golomb::turnaround() {
 		ReadWrite.open(path, "r");
 	}
 };
-int main() {
+int testes() {
 	cout << "Test with m = 5 from -255 to 255: " << endl;
 	int m = 5;
 	Golomb a("golomb.bin",m,"w");
@@ -91,4 +97,5 @@ int main() {
 		cout << " - " << i << " :decode: " << a.decode() << endl;
 		a.turnaround();
 	}
+	return 0;
 }

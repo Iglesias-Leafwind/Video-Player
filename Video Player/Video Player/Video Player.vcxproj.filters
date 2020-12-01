@@ -24,5 +24,13 @@
     <ClCompile Include="Golomb.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Predictor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Predictor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

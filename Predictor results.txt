@@ -1,0 +1,34 @@
+before, 	mode, 	image type, 	after, 		avi, 	time
+659 MB,		   1,	    yuv444,    754 MB,	     143 MB,	Not timed
+659 MB,		   2,	    yuv444,    956 MB,       143 MB,    Not timed
+659 MB,		   3,	    yuv444,    966 MB,       143 MB, C:58m21s   U: 1h48m38s
+659 MB,		   4,	    yuv444,    775 MB,	     143 MB, C:44m52s   U: 1h23m50s
+659 MB,		   5,	    yuv444,    738 MB,       143 MB, C:42m59s   U: 1h16m37s
+659 MB,		   6,	    yuv444,    838 MB,       143 MB, C:45m33s   U: 1h49m10s
+659 MB,		   7,	    yuv444,    824 MB,       143 MB, C:49m19s   U: 1h37m01s
+659 MB,		   8,	    yuv444,    732 MB,	     143 MB, C:46m45s   U: 1h27m05s
+
+659 MB,		   1,	    yuv422,    548 MB,       143 MB, C:31m15s   U: 1h19m04s
+659 MB,		   2,	    yuv422,    683 MB,       143 MB, C:54m59s   U: 1h45m32s
+659 MB,		   3,	    yuv422,    687 MB,       143 MB, C:33m11s   U: 1h07m50s
+659 MB,		   4,	    yuv422,    587 MB,       143 MB, C:30m33s   U: 0h59m24s
+659 MB,		   5,	    yuv422,    551 MB,       143 MB, C:29m53s   U: 1h18m27s
+659 MB,		   6,	    yuv422,    618 MB,       143 MB, C:31m41s   U: 
+659 MB,		   7,	    yuv422,    605 MB,       143 MB, C:31m19s   U:
+659 MB,		   8,	    yuv422,    554 MB,       143 MB, C:30m52s   U:
+
+659 MB,		   1,	    yuv420,    425 MB,       143 MB, C:23m08s   U:
+659 MB,		   2,	    yuv420,    538 MB,       143 MB, C:25m51s   U:
+659 MB,		   3,	    yuv420,    541 MB,       143 MB, C:26m02s   U:
+659 MB,		   4,	    yuv420,    454 MB,       143 MB, C:23m49s   U:
+659 MB,		   5,	    yuv420,    428 MB,       143 MB, C:23m12s   U:
+659 MB,		   6,	    yuv420,    480 MB,       143 MB, C:24m33s   U:
+659 MB,		   7,	    yuv420,    471 MB,       143 MB, C:24m14s   U:
+659 MB,		   8,	    yuv420,    432 MB,       143 MB, C:23m06s   U:
+l
+D:\\Desktop\\Universidade\\CSLP\\projeto\\videos\\ducks_take_off_420_720p50.y4m
+e
+n
+3
+testing
+8

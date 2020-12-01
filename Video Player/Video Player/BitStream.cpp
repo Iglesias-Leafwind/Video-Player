@@ -61,10 +61,10 @@ unsigned char BitStream::readbit() {
         throw runtime_error("Could not open file");
     }
 
-    if (current_bit == 0){
+    if (current_bit == 0) {
         char reading;
-        if(input.get(reading)){
-            for (int i = 7; 0 <= i; i--){
+        if (input.get(reading)) {
+            for (int i = 7; 0 <= i; i--) {
                 currentBitStream[i] = ((unsigned char)reading >> i) & 0x01;
             }
         }
@@ -72,20 +72,23 @@ unsigned char BitStream::readbit() {
             throw runtime_error("Empty File");
         }
     }
-    unsigned char returning = (unsigned char) currentBitStream[7-current_bit++];
+    unsigned char returning = (unsigned char)currentBitStream[7 - current_bit++];
     if(current_bit == 8){
         current_bit = 0;
         currentBitStream = 0;
     }
-    cout << (int) returning;
     return returning;
 }
 void BitStream::close() {
     if (current_bit != 0 and not output.fail()) {
         write();
     }
-    input.close();
-    output.close();
+    if (input.is_open()) {
+        input.close();
+    }
+    else {
+        output.close();
+    }
 }
 void BitStream::open(string file_path,string ReadorWrite) {
     if (input.is_open() or output.is_open()) {

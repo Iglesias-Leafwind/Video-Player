@@ -13,6 +13,10 @@ using namespace std;
 */
 class Golomb {
 public:
+	/*! Golomb();
+	*	default empty constructor
+	*/
+	Golomb();
 	/*! int b
 	*	b is the value used for the numbewr of bites that we are going to user
 	*	on the remainer
@@ -47,4 +51,8 @@ public:
 	*	if writing turns into a read
 	*/
 	void turnaround();
+	/*! void changeM(int m)
+	* it is used to change m value when needed
+	*/
+	void changeM(int m);
 };

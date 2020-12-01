@@ -1,0 +1,13 @@
+Golombo m value = 10
+golombo encode >> Predictor mode
+golombo encode >> video Height
+golombo encode >> video Length
+golombo encode >> number of frames
+golombo encode >> video type (yuv444,yuv422,yuv420,(every 3 channel type can be used like bgr))
+golombo encode >> frames per second
+Golombo m value = 8
+bitstream write 8 with 8 bits
+
+Golombo encode >> frame info after predictor
+ANTES: Golombo m value = 2^(nbits needed to represent the average number of each pixel)
+DEPOIS: Golombo m value = 2^(the average nbits to represent each pixel)
