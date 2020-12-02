@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['segmentationalgorithmflag_50',['segmentationalgorithmFlag',['../_video_01_player_8cpp.html#a88cf591c00b5aeec3f2e80556d021338',1,'Video Player.cpp']]],
-  ['selection_51',['selection',['../_video_01_player_8cpp.html#ad4174319b419e07ce037d1ed891595d8',1,'Video Player.cpp']]],
-  ['selectionslider_52',['selectionSlider',['../_video_01_player_8cpp.html#ad786496a8f6daf7695b75321f1a41a8a',1,'Video Player.cpp']]],
-  ['selectionslidermax_53',['selectionSliderMax',['../_video_01_player_8cpp.html#a8ff5d8da62b4488239343713e402ca3d',1,'Video Player.cpp']]],
-  ['showvideo_54',['showVideo',['../_video_01_player_8cpp.html#a5fb4696151c782051bfc7150fd19cf61',1,'Video Player.cpp']]]
+  ['path_174',['path',['../class_golomb.html#a4ce00c3fcea840c2407f2568b07ed734',1,'Golomb']]],
+  ['platform_5fid_175',['PLATFORM_ID',['../_c_make_c_compiler_id_8c.html#adbc5372f40838899018fadbc89bd588b',1,'PLATFORM_ID():&#160;CMakeCCompilerId.c'],['../_c_make_c_x_x_compiler_id_8cpp.html#adbc5372f40838899018fadbc89bd588b',1,'PLATFORM_ID():&#160;CMakeCXXCompilerId.cpp']]],
+  ['predictor_176',['Predictor',['../class_predictor.html',1,'Predictor'],['../class_predictor.html#a7ca38c42bcfea52d4452cbe64a1e9dd1',1,'Predictor::Predictor()']]],
+  ['predictor_2ecpp_177',['Predictor.cpp',['../_predictor_8cpp.html',1,'']]],
+  ['predictor_2eh_178',['Predictor.h',['../_predictor_8h.html',1,'']]]
 ];

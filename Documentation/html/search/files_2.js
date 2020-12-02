@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['video_20player_2ecpp_78',['Video Player.cpp',['../_video_01_player_8cpp.html',1,'']]]
+  ['golomb_2ecpp_229',['Golomb.cpp',['../_golomb_8cpp.html',1,'']]],
+  ['golomb_2eh_230',['Golomb.h',['../_golomb_8h.html',1,'']]]
 ];

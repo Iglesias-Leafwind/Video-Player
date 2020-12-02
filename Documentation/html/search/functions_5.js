@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['main_88',['main',['../_golomb_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'Golomb.cpp']]],
-  ['menuspeech_89',['menuSpeech',['../_video_01_player_8cpp.html#a41f9d2013d2bec1e7795cfff6a84580a',1,'Video Player.cpp']]]
+  ['golomb_251',['Golomb',['../class_golomb.html#aa6103d56ebec9decc11a69bf6be83208',1,'Golomb::Golomb()'],['../class_golomb.html#a715efee2a47c145815f78e643c293be2',1,'Golomb::Golomb(string path, int m, string readorwrite)']]]
 ];

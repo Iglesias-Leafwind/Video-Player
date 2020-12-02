@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['b_3',['b',['../class_golomb.html#a77eef821f302a9708ce0aacc80cf01be',1,'Golomb']]],
-  ['beta_4',['beta',['../_video_01_player_8cpp.html#a9424343761f8c4f4c1afe8f5b6bf471b',1,'Video Player.cpp']]],
-  ['bitstream_5',['BitStream',['../class_bit_stream.html',1,'BitStream'],['../class_bit_stream.html#af1db2867532d571330d4676cf7a34093',1,'BitStream::BitStream()']]],
-  ['bitstream_2ecpp_6',['BitStream.cpp',['../_bit_stream_8cpp.html',1,'']]],
-  ['bitstream_2eh_7',['BitStream.h',['../_bit_stream_8h.html',1,'']]]
+  ['alpha_101',['alpha',['../main_8cpp.html#a20f4c4490bc8ecbdd1ffcb79acce6035',1,'alpha():&#160;main.cpp'],['../_video_01_player_8cpp.html#a20f4c4490bc8ecbdd1ffcb79acce6035',1,'alpha():&#160;Video Player.cpp']]],
+  ['alphaslider_102',['alphaSlider',['../main_8cpp.html#aa23e9c353eb80a46a0a33ae37c042d7a',1,'alphaSlider():&#160;main.cpp'],['../_video_01_player_8cpp.html#aa23e9c353eb80a46a0a33ae37c042d7a',1,'alphaSlider():&#160;Video Player.cpp']]],
+  ['alphaslidermax_103',['alphaSliderMax',['../main_8cpp.html#af58c0ea9db3a9bb320efee4979b5aa0a',1,'alphaSliderMax():&#160;main.cpp'],['../_video_01_player_8cpp.html#a1ffe8643a9e4d67bb7d7e31655159c8d',1,'alphaSliderMax():&#160;Video Player.cpp']]],
+  ['architecture_5fid_104',['ARCHITECTURE_ID',['../_c_make_c_compiler_id_8c.html#aba35d0d200deaeb06aee95ca297acb28',1,'ARCHITECTURE_ID():&#160;CMakeCCompilerId.c'],['../_c_make_c_x_x_compiler_id_8cpp.html#aba35d0d200deaeb06aee95ca297acb28',1,'ARCHITECTURE_ID():&#160;CMakeCXXCompilerId.cpp']]]
 ];

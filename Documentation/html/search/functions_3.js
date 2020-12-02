@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['editmenu_85',['editMenu',['../_video_01_player_8cpp.html#a6f67e4b2ff8da23e95b096e6f45de01d',1,'Video Player.cpp']]],
-  ['encode_86',['encode',['../class_golomb.html#af89ef5abf26e5f332e646aeef8d0207a',1,'Golomb']]]
+  ['decode_248',['decode',['../class_golomb.html#ae70834fae7d66c98ad8223468c7d78df',1,'Golomb::decode()'],['../class_predictor.html#a91832f1c2b7e08aebaba6596bc17c994',1,'Predictor::decode()']]]
 ];

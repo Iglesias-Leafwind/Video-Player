@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['watermarkcontent_137',['watermarkContent',['../_video_01_player_8cpp.html#a5ef09ec9d1570eb6523bfeeec337c311',1,'Video Player.cpp']]],
-  ['watermarkflag_138',['watermarkFlag',['../_video_01_player_8cpp.html#a070269022e26cf93b5d8ebc503742862',1,'Video Player.cpp']]]
+  ['type_413',['type',['../class_predictor.html#afd18f670541a398a0f32e3bb05135987',1,'Predictor']]]
 ];
