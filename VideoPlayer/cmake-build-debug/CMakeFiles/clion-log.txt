@@ -1,0 +1,5 @@
+"D:\Programs\CLion 2020.2.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" D:\Desktop\Universidade\CSLP\projeto\VideoPlayer
+-- Found OpenCV: D:/Programs/opencv/opencv/mingw-build2 (found version "4.0.1") 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/Desktop/Universidade/CSLP/projeto/VideoPlayer/cmake-build-debug

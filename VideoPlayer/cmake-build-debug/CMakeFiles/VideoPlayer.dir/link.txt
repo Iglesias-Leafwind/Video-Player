@@ -1,0 +1,3 @@
+"D:\Programs\CLion 2020.2.4\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\VideoPlayer.dir/objects.a
+D:\Programs\MingW-W64\mingw64\bin\ar.exe cr CMakeFiles\VideoPlayer.dir/objects.a @CMakeFiles\VideoPlayer.dir\objects1.rsp
+D:\Programs\MingW-W64\mingw64\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\VideoPlayer.dir/objects.a -Wl,--no-whole-archive  -o VideoPlayer.exe -Wl,--out-implib,libVideoPlayer.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\VideoPlayer.dir\linklibs.rsp
