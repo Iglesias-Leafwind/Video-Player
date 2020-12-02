@@ -164,11 +164,17 @@ void Predictor::frameWrite3Channel(Mat frame) {
             square.ptr<uchar>(1)[1] = currentY.ptr<uchar>(linhas+1)[colunas+1];
             numb = calculator(square);
             if (numb < 0) {
+                total = total + (numb * (-1));
+            }
+            else {
+                total = total + numb * 1;
+            }
+            /*if (numb < 0) {
                 total = total + (numb * (-2) -1);
             }
             else {
                 total = total + numb * 2;
-            }
+            }*/
 			golombo.encode(numb);
 			//square = currentU(Rect(colunas, linhas, 2, 2));
             square.ptr<uchar>(0)[0] = currentU.ptr<uchar>(linhas)[colunas];
@@ -177,11 +183,17 @@ void Predictor::frameWrite3Channel(Mat frame) {
             square.ptr<uchar>(1)[1] = currentU.ptr<uchar>(linhas+1)[colunas+1];
             numb = calculator(square);
             if (numb < 0) {
+                total = total + (numb * (-1));
+            }
+            else {
+                total = total + numb * 1;
+            }
+            /*if (numb < 0) {
                 total = total + (numb * (-2) -1);
             }
             else {
                 total = total + numb * 2;
-            }
+            }*/
 			golombo.encode(numb);
 			//square = currentV(Rect(colunas, linhas, 2, 2));
             square.ptr<uchar>(0)[0] = currentV.ptr<uchar>(linhas)[colunas];
@@ -190,18 +202,23 @@ void Predictor::frameWrite3Channel(Mat frame) {
             square.ptr<uchar>(1)[1] = currentV.ptr<uchar>(linhas+1)[colunas+1];
             numb = calculator(square);
             if (numb < 0) {
+                total = total + (numb * (-1));
+            }
+            else {
+                total = total + numb * 1;
+            }
+            /*if (numb < 0) {
                 total = total + (numb * (-2) -1);
             }
             else {
                 total = total + numb * 2;
-            }
+            }*/
 			golombo.encode(numb);
 		}
 	}
 	total = total / (frame.rows * frame.cols * 3);
 	unsigned int count = (int)log2(total) + 1;
-	//count = (int)pow(2, count);
-	cout << count << endl;
+	count = (int)pow(2, count);
 	if (count != golombo.m) {
 		golombo.changeM(count);
 	}
@@ -227,19 +244,24 @@ void Predictor::frameWrite1Channel(Mat frame) {
             square.ptr<uchar>(1)[1] = current.ptr<uchar>(linhas+1)[colunas+1];
 
             numb = calculator(square);
-			if (numb < 0) {
+            if (numb < 0) {
+                total = total + (numb * (-1));
+            }
+            else {
+                total = total + numb * 1;
+            }
+            /*if (numb < 0) {
 				total = total + (numb * (-2) -1);
 			}
 			else {
 				total = total + numb * 2;
-			}
+			}*/
 			golombo.encode(numb);
 		}
 	}
 	total = total / (lines * cols);
 	unsigned int count = (int)log2(total) + 1;
-	//count = (int)pow(2, count);
-    cout << count << endl;
+	count = (int)pow(2, count);
 	if (count != golombo.m) {
 		golombo.changeM(count);
 	}

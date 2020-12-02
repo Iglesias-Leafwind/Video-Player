@@ -4,7 +4,7 @@ project(Testing)
 set(CMAKE_CXX_STANDARD 11)
 
 add_executable(Testing main.cpp BitStream.cpp Golomb.cpp Predictor.cpp)
-
+add_compile_options(-xO3)
 
 set(OpenCV_DIR D:\\Programs\\opencv\\opencv\\mingw-build2)
 find_package( OpenCV REQUIRED )

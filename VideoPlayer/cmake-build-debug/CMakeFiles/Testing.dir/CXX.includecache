@@ -6,18 +6,6 @@
 
 #IncludeRegexTransform: 
 
-D:/Desktop/Universidade/CSLP/projeto/VideoPlayer/BitStream.cpp
-iostream
--
-stdio.h
--
-fstream
--
-BitStream.h
-D:/Desktop/Universidade/CSLP/projeto/VideoPlayer/BitStream.h
-bitset
--
-
 D:/Desktop/Universidade/CSLP/projeto/VideoPlayer/BitStream.h
 iostream
 -
@@ -27,20 +15,6 @@ fstream
 -
 bitset
 -
-
-D:/Desktop/Universidade/CSLP/projeto/VideoPlayer/Golomb.cpp
-iostream
--
-stdio.h
--
-opencv2/opencv.hpp
-D:/Desktop/Universidade/CSLP/projeto/VideoPlayer/opencv2/opencv.hpp
-opencv2/videoio.hpp
--
-BitStream.h
-D:/Desktop/Universidade/CSLP/projeto/VideoPlayer/BitStream.h
-Golomb.h
-D:/Desktop/Universidade/CSLP/projeto/VideoPlayer/Golomb.h
 
 D:/Desktop/Universidade/CSLP/projeto/VideoPlayer/Golomb.h
 iostream
@@ -75,20 +49,6 @@ opencv2/videoio.hpp
 -
 Golomb.h
 D:/Desktop/Universidade/CSLP/projeto/VideoPlayer/Golomb.h
-
-D:/Desktop/Universidade/CSLP/projeto/VideoPlayer/main.cpp
-opencv2/opencv.hpp
-D:/Desktop/Universidade/CSLP/projeto/VideoPlayer/opencv2/opencv.hpp
-opencv2/videoio.hpp
--
-Predictor.h
-D:/Desktop/Universidade/CSLP/projeto/VideoPlayer/Predictor.h
-iostream
--
-stdio.h
--
-time.h
--
 
 D:/Programs/opencv/opencv/mingw-build2/cv_cpu_config.h
 

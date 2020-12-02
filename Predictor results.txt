@@ -25,10 +25,5 @@ before, 	mode, 	image type, 	after, 		avi, 	time
 659 MB,		   6,	    yuv420,    480 MB,       143 MB, C:24m33s   U:
 659 MB,		   7,	    yuv420,    471 MB,       143 MB, C:24m14s   U:
 659 MB,		   8,	    yuv420,    432 MB,       143 MB, C:23m06s   U:
-l
-D:\\Desktop\\Universidade\\CSLP\\projeto\\videos\\ducks_take_off_420_720p50.y4m
-e
-n
-3
-testing
-8
+				       452 MB,		     C:9m40s
+				       483 MB,		     C:10m13s
