@@ -72,7 +72,7 @@ CMAKE_BINARY_DIR = D:\Desktop\Universidade\CSLP\projeto\VideoPlayer\cmake-build-
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/Testing.dir/all
+all: CMakeFiles/VideoPlayer.dir/all
 
 .PHONY : all
 
@@ -82,36 +82,36 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/Testing.dir/clean
+clean: CMakeFiles/VideoPlayer.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/Testing.dir
+# Target rules for target CMakeFiles/VideoPlayer.dir
 
 # All Build rule for target.
-CMakeFiles/Testing.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Testing.dir\build.make CMakeFiles/Testing.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Testing.dir\build.make CMakeFiles/Testing.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Desktop\Universidade\CSLP\projeto\VideoPlayer\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5 "Built target Testing"
-.PHONY : CMakeFiles/Testing.dir/all
+CMakeFiles/VideoPlayer.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VideoPlayer.dir\build.make CMakeFiles/VideoPlayer.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VideoPlayer.dir\build.make CMakeFiles/VideoPlayer.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Desktop\Universidade\CSLP\projeto\VideoPlayer\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5 "Built target VideoPlayer"
+.PHONY : CMakeFiles/VideoPlayer.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/Testing.dir/rule: cmake_check_build_system
+CMakeFiles/VideoPlayer.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\Desktop\Universidade\CSLP\projeto\VideoPlayer\cmake-build-debug\CMakeFiles 5
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/Testing.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/VideoPlayer.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\Desktop\Universidade\CSLP\projeto\VideoPlayer\cmake-build-debug\CMakeFiles 0
-.PHONY : CMakeFiles/Testing.dir/rule
+.PHONY : CMakeFiles/VideoPlayer.dir/rule
 
 # Convenience name for target.
-Testing: CMakeFiles/Testing.dir/rule
+VideoPlayer: CMakeFiles/VideoPlayer.dir/rule
 
-.PHONY : Testing
+.PHONY : VideoPlayer
 
 # clean rule for target.
-CMakeFiles/Testing.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Testing.dir\build.make CMakeFiles/Testing.dir/clean
-.PHONY : CMakeFiles/Testing.dir/clean
+CMakeFiles/VideoPlayer.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VideoPlayer.dir\build.make CMakeFiles/VideoPlayer.dir/clean
+.PHONY : CMakeFiles/VideoPlayer.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

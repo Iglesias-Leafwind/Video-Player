@@ -87,6 +87,35 @@ void Golomb::turnaround() {
 		ReadWrite.open(path, "r");
 	}
 };
+
+signed int Golomb::fakeEncode(signed int encoding){
+    signed int returning = 0;
+    if (encoding < 0) {
+        encoding = (encoding * (-2)) - 1;
+    }
+    else {
+        encoding = (encoding * 2);
+    }
+    int q = encoding / m;
+    int r = encoding - (q * m);
+
+    /*here we will add the quotient part of the algorithm*/
+    returning += q;
+    returning++;
+    //resto < 2^b -m (b-1 bits) e r = r
+    if (r < ((int)pow(2, b) - m)) {
+        returning += b-1;
+    }
+        //resto >= 2^b -m (b bits) e r = r + 2^b-m
+    else if (r >= ((int)pow(2, b) - m)) {
+        returning += b;
+    }
+    else {
+        cout << "You did it!!! BUT HOW?" << endl;
+    }
+    return returning;
+}
+
 int testes() {
 	cout << "Test with m = 5 from -255 to 255: " << endl;
 	int m = 5;

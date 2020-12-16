@@ -76,9 +76,52 @@ include CMakeFiles/VideoPlayer.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/VideoPlayer.dir/flags.make
 
+CMakeFiles/VideoPlayer.dir/BitStream.cpp.obj: CMakeFiles/VideoPlayer.dir/flags.make
+CMakeFiles/VideoPlayer.dir/BitStream.cpp.obj: CMakeFiles/VideoPlayer.dir/includes_CXX.rsp
+CMakeFiles/VideoPlayer.dir/BitStream.cpp.obj: ../BitStream.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Desktop\Universidade\CSLP\projeto\VideoPlayer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/VideoPlayer.dir/BitStream.cpp.obj"
+	D:\Programs\MingW-W64\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\VideoPlayer.dir\BitStream.cpp.obj -c D:\Desktop\Universidade\CSLP\projeto\VideoPlayer\BitStream.cpp
+
+CMakeFiles/VideoPlayer.dir/BitStream.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VideoPlayer.dir/BitStream.cpp.i"
+	D:\Programs\MingW-W64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Desktop\Universidade\CSLP\projeto\VideoPlayer\BitStream.cpp > CMakeFiles\VideoPlayer.dir\BitStream.cpp.i
+
+CMakeFiles/VideoPlayer.dir/BitStream.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VideoPlayer.dir/BitStream.cpp.s"
+	D:\Programs\MingW-W64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Desktop\Universidade\CSLP\projeto\VideoPlayer\BitStream.cpp -o CMakeFiles\VideoPlayer.dir\BitStream.cpp.s
+
+CMakeFiles/VideoPlayer.dir/Golomb.cpp.obj: CMakeFiles/VideoPlayer.dir/flags.make
+CMakeFiles/VideoPlayer.dir/Golomb.cpp.obj: CMakeFiles/VideoPlayer.dir/includes_CXX.rsp
+CMakeFiles/VideoPlayer.dir/Golomb.cpp.obj: ../Golomb.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Desktop\Universidade\CSLP\projeto\VideoPlayer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/VideoPlayer.dir/Golomb.cpp.obj"
+	D:\Programs\MingW-W64\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\VideoPlayer.dir\Golomb.cpp.obj -c D:\Desktop\Universidade\CSLP\projeto\VideoPlayer\Golomb.cpp
+
+CMakeFiles/VideoPlayer.dir/Golomb.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VideoPlayer.dir/Golomb.cpp.i"
+	D:\Programs\MingW-W64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Desktop\Universidade\CSLP\projeto\VideoPlayer\Golomb.cpp > CMakeFiles\VideoPlayer.dir\Golomb.cpp.i
+
+CMakeFiles/VideoPlayer.dir/Golomb.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VideoPlayer.dir/Golomb.cpp.s"
+	D:\Programs\MingW-W64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Desktop\Universidade\CSLP\projeto\VideoPlayer\Golomb.cpp -o CMakeFiles\VideoPlayer.dir\Golomb.cpp.s
+
+CMakeFiles/VideoPlayer.dir/Predictor.cpp.obj: CMakeFiles/VideoPlayer.dir/flags.make
+CMakeFiles/VideoPlayer.dir/Predictor.cpp.obj: CMakeFiles/VideoPlayer.dir/includes_CXX.rsp
+CMakeFiles/VideoPlayer.dir/Predictor.cpp.obj: ../Predictor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Desktop\Universidade\CSLP\projeto\VideoPlayer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/VideoPlayer.dir/Predictor.cpp.obj"
+	D:\Programs\MingW-W64\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\VideoPlayer.dir\Predictor.cpp.obj -c D:\Desktop\Universidade\CSLP\projeto\VideoPlayer\Predictor.cpp
+
+CMakeFiles/VideoPlayer.dir/Predictor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VideoPlayer.dir/Predictor.cpp.i"
+	D:\Programs\MingW-W64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Desktop\Universidade\CSLP\projeto\VideoPlayer\Predictor.cpp > CMakeFiles\VideoPlayer.dir\Predictor.cpp.i
+
+CMakeFiles/VideoPlayer.dir/Predictor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VideoPlayer.dir/Predictor.cpp.s"
+	D:\Programs\MingW-W64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Desktop\Universidade\CSLP\projeto\VideoPlayer\Predictor.cpp -o CMakeFiles\VideoPlayer.dir\Predictor.cpp.s
+
 CMakeFiles/VideoPlayer.dir/main.cpp.obj: CMakeFiles/VideoPlayer.dir/flags.make
+CMakeFiles/VideoPlayer.dir/main.cpp.obj: CMakeFiles/VideoPlayer.dir/includes_CXX.rsp
 CMakeFiles/VideoPlayer.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Desktop\Universidade\CSLP\projeto\VideoPlayer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/VideoPlayer.dir/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Desktop\Universidade\CSLP\projeto\VideoPlayer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/VideoPlayer.dir/main.cpp.obj"
 	D:\Programs\MingW-W64\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\VideoPlayer.dir\main.cpp.obj -c D:\Desktop\Universidade\CSLP\projeto\VideoPlayer\main.cpp
 
 CMakeFiles/VideoPlayer.dir/main.cpp.i: cmake_force
@@ -91,17 +134,38 @@ CMakeFiles/VideoPlayer.dir/main.cpp.s: cmake_force
 
 # Object files for target VideoPlayer
 VideoPlayer_OBJECTS = \
+"CMakeFiles/VideoPlayer.dir/BitStream.cpp.obj" \
+"CMakeFiles/VideoPlayer.dir/Golomb.cpp.obj" \
+"CMakeFiles/VideoPlayer.dir/Predictor.cpp.obj" \
 "CMakeFiles/VideoPlayer.dir/main.cpp.obj"
 
 # External object files for target VideoPlayer
 VideoPlayer_EXTERNAL_OBJECTS =
 
+VideoPlayer.exe: CMakeFiles/VideoPlayer.dir/BitStream.cpp.obj
+VideoPlayer.exe: CMakeFiles/VideoPlayer.dir/Golomb.cpp.obj
+VideoPlayer.exe: CMakeFiles/VideoPlayer.dir/Predictor.cpp.obj
 VideoPlayer.exe: CMakeFiles/VideoPlayer.dir/main.cpp.obj
 VideoPlayer.exe: CMakeFiles/VideoPlayer.dir/build.make
+VideoPlayer.exe: D:/Programs/opencv/opencv/mingw-build2/lib/libopencv_dnn401.dll.a
+VideoPlayer.exe: D:/Programs/opencv/opencv/mingw-build2/lib/libopencv_gapi401.dll.a
+VideoPlayer.exe: D:/Programs/opencv/opencv/mingw-build2/lib/libopencv_ml401.dll.a
+VideoPlayer.exe: D:/Programs/opencv/opencv/mingw-build2/lib/libopencv_objdetect401.dll.a
+VideoPlayer.exe: D:/Programs/opencv/opencv/mingw-build2/lib/libopencv_photo401.dll.a
+VideoPlayer.exe: D:/Programs/opencv/opencv/mingw-build2/lib/libopencv_stitching401.dll.a
+VideoPlayer.exe: D:/Programs/opencv/opencv/mingw-build2/lib/libopencv_video401.dll.a
+VideoPlayer.exe: D:/Programs/opencv/opencv/mingw-build2/lib/libopencv_calib3d401.dll.a
+VideoPlayer.exe: D:/Programs/opencv/opencv/mingw-build2/lib/libopencv_features2d401.dll.a
+VideoPlayer.exe: D:/Programs/opencv/opencv/mingw-build2/lib/libopencv_flann401.dll.a
+VideoPlayer.exe: D:/Programs/opencv/opencv/mingw-build2/lib/libopencv_highgui401.dll.a
+VideoPlayer.exe: D:/Programs/opencv/opencv/mingw-build2/lib/libopencv_videoio401.dll.a
+VideoPlayer.exe: D:/Programs/opencv/opencv/mingw-build2/lib/libopencv_imgcodecs401.dll.a
+VideoPlayer.exe: D:/Programs/opencv/opencv/mingw-build2/lib/libopencv_imgproc401.dll.a
+VideoPlayer.exe: D:/Programs/opencv/opencv/mingw-build2/lib/libopencv_core401.dll.a
 VideoPlayer.exe: CMakeFiles/VideoPlayer.dir/linklibs.rsp
 VideoPlayer.exe: CMakeFiles/VideoPlayer.dir/objects1.rsp
 VideoPlayer.exe: CMakeFiles/VideoPlayer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\Desktop\Universidade\CSLP\projeto\VideoPlayer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable VideoPlayer.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\Desktop\Universidade\CSLP\projeto\VideoPlayer\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable VideoPlayer.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\VideoPlayer.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

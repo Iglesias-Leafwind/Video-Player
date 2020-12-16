@@ -130,17 +130,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Testing
+# Target rules for targets named VideoPlayer
 
 # Build rule for target.
-Testing: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Testing
-.PHONY : Testing
+VideoPlayer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 VideoPlayer
+.PHONY : VideoPlayer
 
 # fast build rule for target.
-Testing/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Testing.dir\build.make CMakeFiles/Testing.dir/build
-.PHONY : Testing/fast
+VideoPlayer/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VideoPlayer.dir\build.make CMakeFiles/VideoPlayer.dir/build
+.PHONY : VideoPlayer/fast
 
 BitStream.obj: BitStream.cpp.obj
 
@@ -148,7 +148,7 @@ BitStream.obj: BitStream.cpp.obj
 
 # target to build an object file
 BitStream.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Testing.dir\build.make CMakeFiles/Testing.dir/BitStream.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VideoPlayer.dir\build.make CMakeFiles/VideoPlayer.dir/BitStream.cpp.obj
 .PHONY : BitStream.cpp.obj
 
 BitStream.i: BitStream.cpp.i
@@ -157,7 +157,7 @@ BitStream.i: BitStream.cpp.i
 
 # target to preprocess a source file
 BitStream.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Testing.dir\build.make CMakeFiles/Testing.dir/BitStream.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VideoPlayer.dir\build.make CMakeFiles/VideoPlayer.dir/BitStream.cpp.i
 .PHONY : BitStream.cpp.i
 
 BitStream.s: BitStream.cpp.s
@@ -166,7 +166,7 @@ BitStream.s: BitStream.cpp.s
 
 # target to generate assembly for a file
 BitStream.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Testing.dir\build.make CMakeFiles/Testing.dir/BitStream.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VideoPlayer.dir\build.make CMakeFiles/VideoPlayer.dir/BitStream.cpp.s
 .PHONY : BitStream.cpp.s
 
 Golomb.obj: Golomb.cpp.obj
@@ -175,7 +175,7 @@ Golomb.obj: Golomb.cpp.obj
 
 # target to build an object file
 Golomb.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Testing.dir\build.make CMakeFiles/Testing.dir/Golomb.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VideoPlayer.dir\build.make CMakeFiles/VideoPlayer.dir/Golomb.cpp.obj
 .PHONY : Golomb.cpp.obj
 
 Golomb.i: Golomb.cpp.i
@@ -184,7 +184,7 @@ Golomb.i: Golomb.cpp.i
 
 # target to preprocess a source file
 Golomb.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Testing.dir\build.make CMakeFiles/Testing.dir/Golomb.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VideoPlayer.dir\build.make CMakeFiles/VideoPlayer.dir/Golomb.cpp.i
 .PHONY : Golomb.cpp.i
 
 Golomb.s: Golomb.cpp.s
@@ -193,7 +193,7 @@ Golomb.s: Golomb.cpp.s
 
 # target to generate assembly for a file
 Golomb.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Testing.dir\build.make CMakeFiles/Testing.dir/Golomb.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VideoPlayer.dir\build.make CMakeFiles/VideoPlayer.dir/Golomb.cpp.s
 .PHONY : Golomb.cpp.s
 
 Predictor.obj: Predictor.cpp.obj
@@ -202,7 +202,7 @@ Predictor.obj: Predictor.cpp.obj
 
 # target to build an object file
 Predictor.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Testing.dir\build.make CMakeFiles/Testing.dir/Predictor.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VideoPlayer.dir\build.make CMakeFiles/VideoPlayer.dir/Predictor.cpp.obj
 .PHONY : Predictor.cpp.obj
 
 Predictor.i: Predictor.cpp.i
@@ -211,7 +211,7 @@ Predictor.i: Predictor.cpp.i
 
 # target to preprocess a source file
 Predictor.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Testing.dir\build.make CMakeFiles/Testing.dir/Predictor.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VideoPlayer.dir\build.make CMakeFiles/VideoPlayer.dir/Predictor.cpp.i
 .PHONY : Predictor.cpp.i
 
 Predictor.s: Predictor.cpp.s
@@ -220,7 +220,7 @@ Predictor.s: Predictor.cpp.s
 
 # target to generate assembly for a file
 Predictor.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Testing.dir\build.make CMakeFiles/Testing.dir/Predictor.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VideoPlayer.dir\build.make CMakeFiles/VideoPlayer.dir/Predictor.cpp.s
 .PHONY : Predictor.cpp.s
 
 main.obj: main.cpp.obj
@@ -229,7 +229,7 @@ main.obj: main.cpp.obj
 
 # target to build an object file
 main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Testing.dir\build.make CMakeFiles/Testing.dir/main.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VideoPlayer.dir\build.make CMakeFiles/VideoPlayer.dir/main.cpp.obj
 .PHONY : main.cpp.obj
 
 main.i: main.cpp.i
@@ -238,7 +238,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Testing.dir\build.make CMakeFiles/Testing.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VideoPlayer.dir\build.make CMakeFiles/VideoPlayer.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -247,7 +247,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Testing.dir\build.make CMakeFiles/Testing.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VideoPlayer.dir\build.make CMakeFiles/VideoPlayer.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -258,7 +258,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... Testing
+	@echo ... VideoPlayer
 	@echo ... BitStream.obj
 	@echo ... BitStream.i
 	@echo ... BitStream.s

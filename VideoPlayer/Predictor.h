@@ -5,6 +5,7 @@
 #include "opencv2/opencv.hpp"
 #include <opencv2/videoio.hpp>
 #include "Golomb.h"
+#include <stdlib.h>     /* abs */
 
 using namespace cv;
 using namespace std;
@@ -16,20 +17,24 @@ using namespace std;
 */
 class Predictor {
 private:
+    /*!void changeGolombM(int total)
+     * this will use a total number of bits and calculate the best m for golomb to use
+     * */
+    void changeGolombM(int total);
     /*! bool rwFlag
     *   Tells us if it is reading or writing
     *  starting with 1 == writing
     */
     bool rwFlag = 1;
-    /*! Mat fillZeros(Mat channel)
+    /*! Mat fillZeros(const Mat& channel)
     * given a Mat with a channel it will fill the 1st row and 1st column with zeros
     * for easier future calculation
     */
-    Mat fillZeros(Mat channel);
-    /*! signed int calculator(Mat numb)
+    Mat fillZeros(const Mat& channel);
+    /*! signed int calculator(const Mat& numb)
     * this function simply gets the numbers from the mat and depending on the mode we are using it will calculate the correct precdictor
     */
-    signed int calculator(Mat numb);
+    signed int calculator(const Mat& numb);
     /*! signed int decalculator(vector<signed int> numb)
     * this function simply gets the vector numbers and depending on the mode we are using it will calculate the original number
     */
@@ -42,15 +47,47 @@ private:
     * will read a 1channel frame from bin file
     */
     Mat frameRead1Channel();
-    /*! Mat frameWrite3Channel(Mat frame)
+    /*! Mat frameWrite3Channel(const Mat& frame)
     * will write a 3channels frame into the bin file
     */
-    void frameWrite3Channel(Mat frame);
-    /*! Mat frameWrite1Channel(Mat frame)
+    void frameWrite3Channel(const Mat& frame);
+    /*! Mat frameWrite1Channel(const Mat& frame)
     * will write a 1channel frame into the bin file
     */
-    void frameWrite1Channel(Mat frame);
+    void frameWrite1Channel(const Mat& frame);
 
+    /*! Mat blockFrameRead3Channel()
+    * will read a 3channels frame from bin file using blocks
+    */
+    Mat blockFrameRead3Channel();
+    /*! Mat blockFrameRead1Channel()
+    * will read a 1channel frame from bin file using blocks
+    */
+    Mat blockFrameRead1Channel();
+    /*! Mat blockFrameWrite3Channel(const Mat& frame)
+    * will write a 3channels frame into the bin file using blocks
+    */
+    void blockFrameWrite3Channel(const Mat& frame);
+    /*! Mat blockFrameWrite1Channel(const Mat& frame)
+    * will write a 1channel frame into the bin file using blocks
+    */
+    void blockFrameWrite1Channel(const Mat& frame);
+    /*! Mat fakePredict3Channel(const Mat& frame)
+     * will check how many bits it is going to use for inter and intra frames
+     * */
+    void fakePredict3Channel(const Mat& frame);
+    /*! Mat fakePredict1Channel(const Mat& frame)
+     * will check how many bits it is going to use for inter and intra frames
+     * */
+    void fakePredict1Channel(const Mat& frame);
+    /*! signed int bitsForIntra
+     * this var is going to tell us how many bits we need for intra frames
+     * */
+    signed int bitsForIntra;
+    /*! signed int bitsForInter
+     * this var is going to tell us how many bits we need for inter frames
+     * */
+    signed int bitsForInter;
 public:
     /*! int videoHeight
     * this is used for readInfo when extracting video info
@@ -77,6 +114,19 @@ public:
     * for saving or reading a frame type
     */
     string type;
+    /*! Mat prevFrame
+     * this is to save the previous frame for intra frame coding and decoding
+     */
+    Mat prevFrame;
+    /*! int blockSize
+    * this is the block size
+    */
+    int blockSize;
+    /*! int blockSearchRadius
+     * this is to determine the radius when searching previous frame
+     * this block size is usually recommended suing 2^n block size
+     * */
+    int blockSearchRadius;
     /*! Golomb golombo
     * this golomb will be used to write and read into and from the bit stream
     */
@@ -97,6 +147,10 @@ public:
     *           else         then a+b-c
     */
     int mode;
+    /*! bool prevFrameF = false
+     *  prevFrameF is a flag that will tell predictor if there is a prevFrame or not when decoding or encoding
+     */
+     bool prevFrameF = false;
     /*! Predictor(int mode,string path)
     * this is the contructor that will accept the mode we want to use to "encode" / "convert" / "decode"
     * and uses path where it will save the encoded file or read the encoded file
@@ -107,18 +161,50 @@ public:
     * and save it on local variables in this class
     */
     void saveInfo(int h, int w, string type, int fps,int frames,string path);
-    /*! void readInfo()
+    /*! void readInfo(string path)
     * will read info from the bin file
     * and save it on local variables in this class
     */
     void readInfo(string path);
-    /*! void encode(Mat frame)
+    /*! void encode(const Mat& frame)
     * here we have the encode function that with a frame it will choose if it has 3 channels or 1 and convert each channel using the selected mode and write in the bin file
     */
-    void encode(Mat frame);
+    void encode(const Mat& frame);
     /*! Mat decode(void)
     * here we have the decode function that with the bin file it will read a frame and convert into a single Mat
     */
     Mat decode();
-    
+
+    /*! void saveEFInfo(int h, int w, string type, int fps,int frames,int blockSearchRadius, int blockSize,string path)
+    * will save info into the bin file
+    * and save it on local variables in this class
+    */
+    void saveEFInfo(int h, int w, string type, int fps,int frames,int blockSearchRadius, int blockSize,string path);
+    /*! void readInfo()
+    * will read info from the bin file
+    * and save it on local variables in this class
+    */
+    void readEFInfo(string path);
+    /*! void encodeA(const Mat& frame)
+    * here we have the encode function that with a frame it will check which function is better
+    * encode or encodeEF and if it has 3 channels or 1 and convert each channel using the selected mode and write in the bin file
+    */
+    void encodeA(const Mat& frame);
+    /*! Mat decode()
+    * here we have the decode function that with the bin file it will read what type of coding was used and decode it
+    * using the correct method decode or decodeEF and convert into a single Mat
+    */
+    Mat decodeA();
+
+
+    /*! void encodeEF(const Mat& frame)
+    * here we have the encode function that with a frame it will divide into blocks
+    * and using previous frame it will find the block difference with the least value
+    * and code that diff block
+    */
+    void encodeEF(const Mat& frame);
+    /*! Mat decodeEF()
+    * here we have the decode function that with the bin file it will read a frame through its blocks and convert into a single Mat
+    */
+    Mat decodeEF();
 };

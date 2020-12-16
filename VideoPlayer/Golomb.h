@@ -55,4 +55,8 @@ public:
 	* it is used to change m value when needed
 	*/
 	void changeM(int m);
+	/*! signed int fakeEncode(signed int encoding)
+	 * it is used to give how many bits it is going to use
+	 * */
+	 signed int fakeEncode(signed int encoding);
 };

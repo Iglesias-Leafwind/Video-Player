@@ -199,6 +199,7 @@ void resetTrackbars() {
     general2 = 0;
     general3 = 0;
 }
+
 /*! \function customBGR2YUV
 *
 *   this function accepts a image and the mode and converts
@@ -1146,8 +1147,10 @@ String menuSpeech() {
     cout << "'i':Apply canny edge algorithm." << endl;
     cout << "'l':load a video path." << endl;
     cout << "'p':personal YUV2BGR and BGR2YUV." << endl;
-    cout << "'n':n for compiling" << endl;
-    cout << "'m':m for uncompiling" << endl;
+    cout << "'n':n for compiling intra" << endl;
+    cout << "'m':m for uncompiling intra" << endl;
+    cout << "'r':r for compiling intra+inter" << endl;
+    cout << "'s':s for uncompiling intra+inter" << endl;
     cout << "'q':Leave." << endl;
     cout << "Hoption= ";
     String hoption;
@@ -1330,6 +1333,7 @@ void editMenu() {
                 // If the frame is empty, break immediately
                 if (frame.empty())
                     break;
+
                 Mat BGRFrame = customYUV2BGR(frame, yuvType);
                 // Write the frame into the file deterrmined in the string output
                 video.write(BGRFrame);
@@ -1357,7 +1361,150 @@ void editMenu() {
             hours = minutes / 60;
             cout << hours << ":" << int(minutes % 60) << ":" << int(seconds % 60) << endl;
         }
-        else {
+        else if (hoption == "r") {
+            cout << "Please input the yuv type(1-yuv444,2-yuv422,3-yuv420): ";
+            string yuvType = "";
+            getline(cin, yuvType);
+            if (yuvType == "2") {
+                cout << "Selected yuv422!" << endl;
+                yuvType = "4:2:2";
+            }
+            else if (yuvType == "3") {
+                cout << "Selected yuv420!" << endl;
+                yuvType = "4:2:0";
+            }
+            else {
+                cout << "Selected yuv444!" << endl;
+                yuvType = "4:4:4";
+            }
+            cout << "Please input the block size this will do 2^(inputed number): ";
+            string blockSizeInput = "";
+            getline(cin, blockSizeInput);
+            int blockSize = pow(2,stoi(blockSizeInput));
+            cout << "Please input the scan size: ";
+            string scanSize = "";
+            getline(cin, scanSize);
+            int scanning = stoi(scanSize);
+            cout << "Please input the name of the compressed bin file: ";
+            string binF = "";
+            getline(cin, binF);
+            binF = "D:\\Desktop\\Universidade\\CSLP\\projeto\\binFiles\\" + binF + ".bin";
+            cout << "Please input the compression mode: \n1- a\n2- b\n3- c\n4- a+b-c\n5- a+(b-c)/2\n6- b+(a-c)/2\n7- (a+b)/2\n8- non linear\n: ";
+            string commandInput = "";
+            getline(cin, commandInput);
+            int mode = stoi(commandInput);
+            startTime = time(0);
+
+            if (videoPath == "Null") {
+                cout << "Use HOPtion 'l' to load a video." << endl;
+            }
+            else {
+                // Create a VideoCapture object and open the input file
+                VideoCapture inputVideo(videoPath);
+                // Check if camera opened successfully
+                if (!inputVideo.isOpened())
+                {
+                    cout << "Could not open the input video: " << videoPath << endl;
+                }
+                else {
+                    //instead of showing compile
+                    int fps = inputVideo.get(CAP_PROP_FPS);
+                    int frame_width = inputVideo.get(CAP_PROP_FRAME_WIDTH);
+                    int frame_height = inputVideo.get(CAP_PROP_FRAME_HEIGHT);
+                    int frames = inputVideo.get(CAP_PROP_FRAME_COUNT);
+                    int frameqty = 1;
+                    Predictor predict(mode);
+                    predict.saveEFInfo(frame_height, frame_width, yuvType, fps, frames, scanning,blockSize,binF);
+                    while (1) {
+                        // Capture frame-by-frame
+                        inputVideo >> frame;
+                        // If the frame is empty, break immediately
+                        if (frame.empty())
+                            break;
+                        Mat yuvFrame = customBGR2YUV(frame, yuvType);
+                        predict.encodeA(yuvFrame);
+                        if (frameqty % 5 == 0) {
+                            endTime = time(0);
+                            double estimated = difftime(endTime, startTime);
+                            //estimated = (estimated/frameqty) * frames;
+                            estimated = (estimated / ((frameqty * 100) / frames)) * (100 - ((frameqty * 100) / frames));
+                            int seconds, hours, minutes;
+                            seconds = int(estimated);
+                            minutes = seconds / 60;
+                            hours = minutes / 60;
+                            cout << (frameqty * 100) / frames << "% estimated remaining time: " << hours << "H:" << int(minutes%60) << "M:" << int(seconds%60) << "S" << endl;
+                        }
+                        frameqty++;
+                    }
+                    // When everything done, release the video capture object
+                    inputVideo.release();
+                    predict.golombo.ReadWrite.close();
+                }
+            }
+            endTime = time(0);
+            double estimated = difftime(endTime, startTime);
+            int seconds, hours, minutes;
+            seconds = int(estimated);
+            minutes = seconds / 60;
+            hours = minutes / 60;
+            cout << hours << ":" << int(minutes % 60) << ":" << int(seconds % 60) << endl;
+        }else if (hoption == "s") {
+            // Default resolution of the frame is obtained.The default resolution is system dependent.
+            cout << "Please input the name of the compressed bin file: ";
+            string binF = "";
+            getline(cin, binF);
+            binF = "D:\\Desktop\\Universidade\\CSLP\\projeto\\binFiles\\" + binF + ".bin";
+            Predictor predict2(8);
+            startTime = time(0);
+            predict2.readEFInfo(binF);
+            int frame_width = predict2.videoWidth;
+            int frame_height = predict2.videoHeight;
+            int fps = predict2.videoFPS;
+            string yuvType = predict2.type;
+            cout << "Please input the name of the video file (saving as .avi): ";
+            string videoF = "";
+            getline(cin, videoF);
+            string output = "D:\\Desktop\\Universidade\\CSLP\\projeto\\videos\\" + videoF + ".avi";
+            // Define the codec and create VideoWriter object.The output is stored in 'outcpp.avi' file.
+            VideoWriter video(output, VideoWriter::fourcc('M', 'J', 'P', 'G'), fps, Size(frame_width, frame_height));
+            int frameqty = 1;
+            int totalFrames = predict2.videoFrames;
+            while (frameqty < totalFrames)
+            {
+                Mat frame;
+                // Capture frame-by-frame
+                frame = predict2.decodeA();
+                //get decoded frame
+                // If the frame is empty, break immediately
+                if (frame.empty())
+                    break;
+                Mat BGRFrame = customYUV2BGR(frame, yuvType);
+                // Write the frame into the file deterrmined in the string output
+                video.write(BGRFrame);
+                if (frameqty % 5 == 0) {
+                    endTime = time(0);
+                    double estimated = difftime(endTime, startTime);
+                    //estimated = (estimated/frameqty) * totalFrames;
+                    estimated = (estimated / ((frameqty * 100) / totalFrames)) * (100 - ((frameqty * 100) / totalFrames));
+                    int seconds, hours, minutes;
+                    seconds = int(estimated);
+                    minutes = seconds / 60;
+                    hours = minutes / 60;
+                    cout << (frameqty * 100) / totalFrames << "% estimated remaining time: " << hours << "H:" << int(minutes % 60) << "M:" << int(seconds % 60) << "S" << endl;
+                }
+                frameqty++;
+            }
+            // When everything done, release and write object
+            video.release();
+            predict2.golombo.ReadWrite.close();
+            endTime = time(0);
+            double estimated = difftime(endTime, startTime);
+            int seconds, hours, minutes;
+            seconds = int(estimated);
+            minutes = seconds / 60;
+            hours = minutes / 60;
+            cout << hours << ":" << int(minutes % 60) << ":" << int(seconds % 60) << endl;
+        }else {
             cout << "Invalid HOPtion!" << endl;
         }
 

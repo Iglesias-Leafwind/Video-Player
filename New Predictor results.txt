@@ -1,0 +1,12 @@
+D:\Desktop\Universidade\CSLP\projeto\videos\ducks_take_off_420_720p50.y4m
+D:\Desktop\Universidade\CSLP\projeto\videos\park_joy_444_720p50.y4m
+before, 	mode, 	image type,searchRadius,blockSize, 	after, 		avi, 	time
+INTRA
+659 MB,		   8,	    yuv444,        None,     None,     732 MB,	     143 MB, C:46m45s   U: 1h27m05s
+659 MB,		   8,	    yuv422,        None,     None,     554 MB,       143 MB, C:30m52s   U:
+659 MB,		   8,	    yuv420,        None,     None,     432 MB,       143 MB, C: 9m40s   U:
+
+FakePredictor (INTRA OR INTER)/*antes estava a escrever os shifts mal e estava a ver os frames mal e estava a guardar os blocos mal e descobri que estava tudo mal*/
+659 MB,		   8,	    yuv444,	      3,   2^4=16,      732MB,	     143 MB,	26:08 min vs  9:58 min decoding
+659 MB,		   8,	    yuv422,	      3,   2^4=16,      559MB,	     143 MB,	19:21 min vs  8:31 min decoding
+659 MB,		   8,	    yuv420,	      3,   2^4=16,      432MB,	     143 MB,	14:11 min vs  8:08 min decoding

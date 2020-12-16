@@ -1,4 +1,7 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/VideoPlayer.dir/BitStream.cpp.obj"
+  "CMakeFiles/VideoPlayer.dir/Golomb.cpp.obj"
+  "CMakeFiles/VideoPlayer.dir/Predictor.cpp.obj"
   "CMakeFiles/VideoPlayer.dir/main.cpp.obj"
   "VideoPlayer.exe"
   "VideoPlayer.exe.manifest"

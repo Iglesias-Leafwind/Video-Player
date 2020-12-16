@@ -35,6 +35,8 @@ opencv2/opencv.hpp
 D:/Desktop/Universidade/CSLP/projeto/VideoPlayer/opencv2/opencv.hpp
 Predictor.h
 D:/Desktop/Universidade/CSLP/projeto/VideoPlayer/Predictor.h
+stdlib.h
+-
 
 D:/Desktop/Universidade/CSLP/projeto/VideoPlayer/Predictor.h
 iostream
@@ -49,6 +51,8 @@ opencv2/videoio.hpp
 -
 Golomb.h
 D:/Desktop/Universidade/CSLP/projeto/VideoPlayer/Golomb.h
+stdlib.h
+-
 
 D:/Programs/opencv/opencv/mingw-build2/cv_cpu_config.h
 
