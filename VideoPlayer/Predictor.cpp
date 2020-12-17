@@ -7,6 +7,9 @@ using namespace cv;
 using namespace std;
 
 void Predictor::changeGolombM(int total){
+    if(total <= 0){
+        total = 1;
+    }
     unsigned int count = (int)log2(total) + 1;
     count = (int)pow(2, count);
 
