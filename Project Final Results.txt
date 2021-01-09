@@ -1,0 +1,46 @@
+	a) ducks_take_off
+D:\Desktop\Universidade\CSLP\projeto\videos\ducks_take_off_420_720p50.y4m
+Compression Method:Size before:Size after:Time compressing:Time uncompressing:Bits per pixel;
+INTRA no loss	  :659MB      :432MB     :  08min 06seg   :  11min 51seg     :    4.806     ;
+INTRA loss	  :659MB      :259MB     :  06min 32seg   :  09min 50seg     :    3.002     ;
+INTER no loss	  :659MB      :450MB     :  23min 49seg   :  07min 02seg     :    4.996     ;
+INTER loss	  :659MB      :312MB     :  17min 59seg   :  06min 22seg     :    3.666     ;
+
+	b) in_to_tree
+D:\Desktop\Universidade\CSLP\projeto\videos\in_to_tree_420_720p50.y4m
+Compression Method:Size before:Size after:Time compressing:Time uncompressing:Bits per pixel;
+INTRA no loss	  :659MB      :400MB     :  06min 30seg   :  09min 23seg     :    4.228     ;
+INTRA loss	  :659MB      :253MB     :  05min 12seg   :  06min 30seg     :    3.002     ;
+INTER no loss	  :659MB      :391MB     :  17min 34seg   :  04min 58seg     :    4.178     ;
+INTER loss	  :659MB      :269MB     :  13min 33seg   :  07min 03seg     :    3.122     ;
+
+	c) old_town_cross
+D:\Desktop\Universidade\CSLP\projeto\videos\old_town_cross_420_720p50.y4m
+Compression Method:Size before:Size after:Time compressing:Time uncompressing:Bits per pixel;
+INTRA no loss	  :659MB      :384MB     :  06min 13seg   :  09min 12seg     :    4.000     ;
+INTRA loss	  :659MB      :252MB     :  05min 22seg   :  07min 44seg     :    3.002     ;
+INTER no loss	  :659MB      :363MB     :  17min 52seg   :  04min 47seg     :    4.000     ;
+INTER loss	  :659MB      :252MB     :  12min 48seg   :  07min 23seg     :    3.002     ;
+
+	d) park_joy
+D:\Desktop\Universidade\CSLP\projeto\videos\park_joy_444_720p50.y4m
+Compression Method:Size before:Size after:Time compressing:Time uncompressing:Bits per pixel;
+INTRA no loss	  :1280MB     :501MB     :  07min 09seg   :  10min 08seg     :    5.488     ;
+INTRA loss	  :1280MB     :278MB     :  05min 12seg   :  07min 41seg     :    3.002     ;
+INTER no loss	  :1280MB     :475MB     :  17min 49seg   :  05min 25seg     :    5.218     ;
+INTER loss	  :1280MB     :343MB     :  15min 58seg   :  05min 57seg     :    3.972     ;
+	eu) akiyo_cif
+D:\Desktop\Universidade\CSLP\projeto\videos\akiyo_cif.y4m
+Compression Method:Size before:Size after:Time compressing:Time uncompressing:Bits per pixel;
+INTRA no loss	  :43.5MB     :20.2MB    :  00min 20seg   :  00min 29seg     :    3.003     ;
+INTRA loss	  :43.5MB     :16.5MB    :  00min 21seg   :  00min 28seg     :    3.003     ;
+INTER no loss	  :43.5MB     :17.3MB    :  00min 44seg   :  00min 13seg     :    3.003     ;
+INTER loss	  :43.5MB     :16.4MB    :  01min 00seg   :  00min 12seg     :    3.003     ;
+
+	Params used:
+Compression Mode	- Non Linear
+Image Type 		- yuv420
+Search Radius		- 2
+Block Size		- 16
+Loss number of bits	- 3
+

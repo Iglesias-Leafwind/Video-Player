@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "D:/Desktop/Universidade/CSLP/projeto/VideoPlayer/BitStream.cpp" "D:/Desktop/Universidade/CSLP/projeto/VideoPlayer/cmake-build-debug/CMakeFiles/VideoPlayer.dir/BitStream.cpp.obj"
   "D:/Desktop/Universidade/CSLP/projeto/VideoPlayer/Golomb.cpp" "D:/Desktop/Universidade/CSLP/projeto/VideoPlayer/cmake-build-debug/CMakeFiles/VideoPlayer.dir/Golomb.cpp.obj"
+  "D:/Desktop/Universidade/CSLP/projeto/VideoPlayer/LossyPredictor.cpp" "D:/Desktop/Universidade/CSLP/projeto/VideoPlayer/cmake-build-debug/CMakeFiles/VideoPlayer.dir/LossyPredictor.cpp.obj"
   "D:/Desktop/Universidade/CSLP/projeto/VideoPlayer/Predictor.cpp" "D:/Desktop/Universidade/CSLP/projeto/VideoPlayer/cmake-build-debug/CMakeFiles/VideoPlayer.dir/Predictor.cpp.obj"
   "D:/Desktop/Universidade/CSLP/projeto/VideoPlayer/main.cpp" "D:/Desktop/Universidade/CSLP/projeto/VideoPlayer/cmake-build-debug/CMakeFiles/VideoPlayer.dir/main.cpp.obj"
   )

@@ -128,6 +128,9 @@
 		<Unit filename="D:/Desktop/Universidade/CSLP/projeto/VideoPlayer/Golomb.h">
 			<Option target="VideoPlayer"/>
 		</Unit>
+		<Unit filename="D:/Desktop/Universidade/CSLP/projeto/VideoPlayer/LossyPredictor.cpp">
+			<Option target="VideoPlayer"/>
+		</Unit>
 		<Unit filename="D:/Desktop/Universidade/CSLP/projeto/VideoPlayer/Predictor.cpp">
 			<Option target="VideoPlayer"/>
 		</Unit>

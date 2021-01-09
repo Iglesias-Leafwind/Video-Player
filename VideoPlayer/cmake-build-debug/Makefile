@@ -196,6 +196,33 @@ Golomb.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\VideoPlayer.dir\build.make CMakeFiles/VideoPlayer.dir/Golomb.cpp.s
 .PHONY : Golomb.cpp.s
 
+LossyPredictor.obj: LossyPredictor.cpp.obj
+
+.PHONY : LossyPredictor.obj
+
+# target to build an object file
+LossyPredictor.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VideoPlayer.dir\build.make CMakeFiles/VideoPlayer.dir/LossyPredictor.cpp.obj
+.PHONY : LossyPredictor.cpp.obj
+
+LossyPredictor.i: LossyPredictor.cpp.i
+
+.PHONY : LossyPredictor.i
+
+# target to preprocess a source file
+LossyPredictor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VideoPlayer.dir\build.make CMakeFiles/VideoPlayer.dir/LossyPredictor.cpp.i
+.PHONY : LossyPredictor.cpp.i
+
+LossyPredictor.s: LossyPredictor.cpp.s
+
+.PHONY : LossyPredictor.s
+
+# target to generate assembly for a file
+LossyPredictor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VideoPlayer.dir\build.make CMakeFiles/VideoPlayer.dir/LossyPredictor.cpp.s
+.PHONY : LossyPredictor.cpp.s
+
 Predictor.obj: Predictor.cpp.obj
 
 .PHONY : Predictor.obj
@@ -265,6 +292,9 @@ help:
 	@echo ... Golomb.obj
 	@echo ... Golomb.i
 	@echo ... Golomb.s
+	@echo ... LossyPredictor.obj
+	@echo ... LossyPredictor.i
+	@echo ... LossyPredictor.s
 	@echo ... Predictor.obj
 	@echo ... Predictor.i
 	@echo ... Predictor.s

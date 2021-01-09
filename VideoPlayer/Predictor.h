@@ -17,6 +17,7 @@ using namespace std;
 */
 class Predictor {
 private:
+
     /*!void changeGolombM(int total)
      * this will use a total number of bits and calculate the best m for golomb to use
      * */

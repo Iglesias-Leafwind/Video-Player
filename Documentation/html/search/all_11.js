@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['version_208',['version',['../link_8txt.html#a7208ba8c7d151799c4e0a36c07f0e70b',1,'link.txt']]],
-  ['videofps_209',['videoFPS',['../class_predictor.html#a63cb2bc1f9a6942a5adb3ecdba973ca9',1,'Predictor']]],
-  ['videoframes_210',['videoFrames',['../class_predictor.html#adfe9b128692de97678de0bfc9056e172',1,'Predictor']]],
-  ['videoheight_211',['videoHeight',['../class_predictor.html#a9a690a13571815284c94f61ce34ad81f',1,'Predictor']]],
-  ['videopath_212',['videoPath',['../main_8cpp.html#a0df2acae8a5514d1b3128895fa6138f3',1,'main.cpp']]],
-  ['videowidth_213',['videoWidth',['../class_predictor.html#a8c3b7dab21a414add2df89eb9dadbd4b',1,'Predictor']]]
+  ['targetdirectories_2etxt_209',['TargetDirectories.txt',['../_target_directories_8txt.html',1,'']]],
+  ['testes_210',['testes',['../_golomb_8cpp.html#ad1a3ee9646261a3dbf148a0450b549dd',1,'Golomb.cpp']]],
+  ['tests_211',['tests',['../_bit_stream_8cpp.html#a0040b31a2648820e75882b52c2790efa',1,'BitStream.cpp']]],
+  ['totalpixeis_212',['totalPixeis',['../class_lossy_predictor.html#a1eb7171793d0480f3aa83ec4d9d6045e',1,'LossyPredictor']]],
+  ['turnaround_213',['turnaround',['../class_golomb.html#a8b66cbde935f91d93800e548245d48c2',1,'Golomb']]],
+  ['type_214',['type',['../class_lossy_predictor.html#a2851951815996ee3c1e5b081455734fb',1,'LossyPredictor::type()'],['../class_predictor.html#afd18f670541a398a0f32e3bb05135987',1,'Predictor::type()']]]
 ];

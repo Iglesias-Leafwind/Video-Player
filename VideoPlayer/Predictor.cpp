@@ -21,6 +21,7 @@ void Predictor::changeGolombM(int total){
     }
     golombo.ReadWrite.writeNbits(count, 8);
 }
+
 Predictor::Predictor(int mode) {
     this->mode = mode;
 }

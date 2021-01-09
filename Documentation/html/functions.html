@@ -71,10 +71,15 @@ $(function() {
 : <a class="el" href="class_bit_stream.html#af1db2867532d571330d4676cf7a34093">BitStream</a>
 </li>
 <li>blockSearchRadius
-: <a class="el" href="class_predictor.html#ab8b30847f844c0422346d0da05623d85">Predictor</a>
+: <a class="el" href="class_lossy_predictor.html#a0acac58ca1bf9893669ad485bc00277a">LossyPredictor</a>
+, <a class="el" href="class_predictor.html#ab8b30847f844c0422346d0da05623d85">Predictor</a>
 </li>
 <li>blockSize
-: <a class="el" href="class_predictor.html#aed6dc0e967b9d57e7642a9f2541a0e47">Predictor</a>
+: <a class="el" href="class_lossy_predictor.html#a81e1bfe6ab8c944846f3a97cf97adbea">LossyPredictor</a>
+, <a class="el" href="class_predictor.html#aed6dc0e967b9d57e7642a9f2541a0e47">Predictor</a>
+</li>
+<li>bpp
+: <a class="el" href="class_lossy_predictor.html#a59b03b86d9fe3d0334a1b72972eb8a4e">LossyPredictor</a>
 </li>
 </ul>
 
@@ -98,13 +103,16 @@ $(function() {
 <h3><a id="index_d"></a>- d -</h3><ul>
 <li>decode()
 : <a class="el" href="class_golomb.html#ae70834fae7d66c98ad8223468c7d78df">Golomb</a>
+, <a class="el" href="class_lossy_predictor.html#a0bef0051fb1ae28ea084504950a60f65">LossyPredictor</a>
 , <a class="el" href="class_predictor.html#a91832f1c2b7e08aebaba6596bc17c994">Predictor</a>
 </li>
 <li>decodeA()
-: <a class="el" href="class_predictor.html#a7559d5814babacaf5d25100ad59defdd">Predictor</a>
+: <a class="el" href="class_lossy_predictor.html#a87b21fbe2d561f49c9337678624a71f3">LossyPredictor</a>
+, <a class="el" href="class_predictor.html#a7559d5814babacaf5d25100ad59defdd">Predictor</a>
 </li>
 <li>decodeEF()
-: <a class="el" href="class_predictor.html#ac705329f924c3cade2c500ef0ff9030c">Predictor</a>
+: <a class="el" href="class_lossy_predictor.html#a807fbeeb0b8fa5fcb30150d3ad9c2c55">LossyPredictor</a>
+, <a class="el" href="class_predictor.html#ac705329f924c3cade2c500ef0ff9030c">Predictor</a>
 </li>
 </ul>
 
@@ -112,13 +120,16 @@ $(function() {
 <h3><a id="index_e"></a>- e -</h3><ul>
 <li>encode()
 : <a class="el" href="class_golomb.html#af89ef5abf26e5f332e646aeef8d0207a">Golomb</a>
+, <a class="el" href="class_lossy_predictor.html#a41114c0fcdc691cdcc6fef2122cc1c63">LossyPredictor</a>
 , <a class="el" href="class_predictor.html#a90e34a126b122ecc46082cdd7bf6f188">Predictor</a>
 </li>
 <li>encodeA()
-: <a class="el" href="class_predictor.html#ac2d2c1dcfb078bb3e5ef1f7305d46cf0">Predictor</a>
+: <a class="el" href="class_lossy_predictor.html#a691326fca62203e59e28921d5ba59a2b">LossyPredictor</a>
+, <a class="el" href="class_predictor.html#ac2d2c1dcfb078bb3e5ef1f7305d46cf0">Predictor</a>
 </li>
 <li>encodeEF()
-: <a class="el" href="class_predictor.html#af47a006952893e34de0d6b506a9d7454">Predictor</a>
+: <a class="el" href="class_lossy_predictor.html#ac89561c9934e1935cd8c6cf325fd73c3">LossyPredictor</a>
+, <a class="el" href="class_predictor.html#af47a006952893e34de0d6b506a9d7454">Predictor</a>
 </li>
 </ul>
 
@@ -131,11 +142,15 @@ $(function() {
 
 
 <h3><a id="index_g"></a>- g -</h3><ul>
+<li>getbpp()
+: <a class="el" href="class_lossy_predictor.html#a9522df9357370608786ab7bdcee5e0e1">LossyPredictor</a>
+</li>
 <li>Golomb()
 : <a class="el" href="class_golomb.html#aa6103d56ebec9decc11a69bf6be83208">Golomb</a>
 </li>
 <li>golombo
-: <a class="el" href="class_predictor.html#ad7e5da332e03ddd3f7e01f53e672e526">Predictor</a>
+: <a class="el" href="class_lossy_predictor.html#a02636b989e6caa22a9c7885671b8d077">LossyPredictor</a>
+, <a class="el" href="class_predictor.html#ad7e5da332e03ddd3f7e01f53e672e526">Predictor</a>
 </li>
 </ul>
 
@@ -147,12 +162,27 @@ $(function() {
 </ul>
 
 
+<h3><a id="index_l"></a>- l -</h3><ul>
+<li>LossyPredictor()
+: <a class="el" href="class_lossy_predictor.html#a98002516c9ae36d745b787b944cd03f4">LossyPredictor</a>
+</li>
+</ul>
+
+
 <h3><a id="index_m"></a>- m -</h3><ul>
 <li>m
 : <a class="el" href="class_golomb.html#aea433fe3049440988ad1fa1a5eb536a3">Golomb</a>
 </li>
 <li>mode
-: <a class="el" href="class_predictor.html#a00713edbdff6c4ff7484814b7ad21024">Predictor</a>
+: <a class="el" href="class_lossy_predictor.html#a155e15a82c0c077fae8a2deb2d59a941">LossyPredictor</a>
+, <a class="el" href="class_predictor.html#a00713edbdff6c4ff7484814b7ad21024">Predictor</a>
+</li>
+</ul>
+
+
+<h3><a id="index_n"></a>- n -</h3><ul>
+<li>nbits
+: <a class="el" href="class_lossy_predictor.html#af9f7263862b278dd69fd25eff2cc2bd2">LossyPredictor</a>
 </li>
 </ul>
 
@@ -175,10 +205,12 @@ $(function() {
 : <a class="el" href="class_predictor.html#a7ca38c42bcfea52d4452cbe64a1e9dd1">Predictor</a>
 </li>
 <li>prevFrame
-: <a class="el" href="class_predictor.html#ab125a5aff71331a4b52da8e84d980f3e">Predictor</a>
+: <a class="el" href="class_lossy_predictor.html#af6668cb2d4a385d11cf9281735c0c1e2">LossyPredictor</a>
+, <a class="el" href="class_predictor.html#ab125a5aff71331a4b52da8e84d980f3e">Predictor</a>
 </li>
 <li>prevFrameF
-: <a class="el" href="class_predictor.html#a131d176971d11c86330263d70835afcf">Predictor</a>
+: <a class="el" href="class_lossy_predictor.html#ade36291d4af7da2ce46636bed81f9938">LossyPredictor</a>
+, <a class="el" href="class_predictor.html#a131d176971d11c86330263d70835afcf">Predictor</a>
 </li>
 </ul>
 
@@ -188,10 +220,12 @@ $(function() {
 : <a class="el" href="class_bit_stream.html#a4accc111a5c1a01d33449549d8cb7507">BitStream</a>
 </li>
 <li>readEFInfo()
-: <a class="el" href="class_predictor.html#af518703d9b96fa1395121035180e4ca4">Predictor</a>
+: <a class="el" href="class_lossy_predictor.html#a259852274adfe60d23e7fa69bd2120c1">LossyPredictor</a>
+, <a class="el" href="class_predictor.html#af518703d9b96fa1395121035180e4ca4">Predictor</a>
 </li>
 <li>readInfo()
-: <a class="el" href="class_predictor.html#a603f4df05fcf596d6ebd913bb694af9c">Predictor</a>
+: <a class="el" href="class_lossy_predictor.html#a2c4011a51f72855a3807ff666f2b3376">LossyPredictor</a>
+, <a class="el" href="class_predictor.html#a603f4df05fcf596d6ebd913bb694af9c">Predictor</a>
 </li>
 <li>readNbits()
 : <a class="el" href="class_bit_stream.html#a04883bf64d645907c84e986e427dc800">BitStream</a>
@@ -207,36 +241,46 @@ $(function() {
 
 <h3><a id="index_s"></a>- s -</h3><ul>
 <li>saveEFInfo()
-: <a class="el" href="class_predictor.html#ab502d28a5ed1b0dd0e5758f5faec8512">Predictor</a>
+: <a class="el" href="class_lossy_predictor.html#ae5b486782e71882306d53fcad27bcfe8">LossyPredictor</a>
+, <a class="el" href="class_predictor.html#ab502d28a5ed1b0dd0e5758f5faec8512">Predictor</a>
 </li>
 <li>saveInfo()
-: <a class="el" href="class_predictor.html#a349e84c7d115dbbc923de6b5c0238c93">Predictor</a>
+: <a class="el" href="class_lossy_predictor.html#a05204a2e27125bc58e0a9f5933463cf0">LossyPredictor</a>
+, <a class="el" href="class_predictor.html#a349e84c7d115dbbc923de6b5c0238c93">Predictor</a>
 </li>
 </ul>
 
 
 <h3><a id="index_t"></a>- t -</h3><ul>
+<li>totalPixeis
+: <a class="el" href="class_lossy_predictor.html#a1eb7171793d0480f3aa83ec4d9d6045e">LossyPredictor</a>
+</li>
 <li>turnaround()
 : <a class="el" href="class_golomb.html#a8b66cbde935f91d93800e548245d48c2">Golomb</a>
 </li>
 <li>type
-: <a class="el" href="class_predictor.html#afd18f670541a398a0f32e3bb05135987">Predictor</a>
+: <a class="el" href="class_lossy_predictor.html#a2851951815996ee3c1e5b081455734fb">LossyPredictor</a>
+, <a class="el" href="class_predictor.html#afd18f670541a398a0f32e3bb05135987">Predictor</a>
 </li>
 </ul>
 
 
 <h3><a id="index_v"></a>- v -</h3><ul>
 <li>videoFPS
-: <a class="el" href="class_predictor.html#a63cb2bc1f9a6942a5adb3ecdba973ca9">Predictor</a>
+: <a class="el" href="class_lossy_predictor.html#a54965602a41fc7e1dc8eadd57e71447b">LossyPredictor</a>
+, <a class="el" href="class_predictor.html#a63cb2bc1f9a6942a5adb3ecdba973ca9">Predictor</a>
 </li>
 <li>videoFrames
-: <a class="el" href="class_predictor.html#adfe9b128692de97678de0bfc9056e172">Predictor</a>
+: <a class="el" href="class_lossy_predictor.html#a33482c6745a576dd5b6d6f5a39e8f3c6">LossyPredictor</a>
+, <a class="el" href="class_predictor.html#adfe9b128692de97678de0bfc9056e172">Predictor</a>
 </li>
 <li>videoHeight
-: <a class="el" href="class_predictor.html#a9a690a13571815284c94f61ce34ad81f">Predictor</a>
+: <a class="el" href="class_lossy_predictor.html#affe8ecc979ab9f2798a4b362328a4f81">LossyPredictor</a>
+, <a class="el" href="class_predictor.html#a9a690a13571815284c94f61ce34ad81f">Predictor</a>
 </li>
 <li>videoWidth
-: <a class="el" href="class_predictor.html#a8c3b7dab21a414add2df89eb9dadbd4b">Predictor</a>
+: <a class="el" href="class_lossy_predictor.html#a3cdd9029172d1c2c101ef1c3b6ad3e37">LossyPredictor</a>
+, <a class="el" href="class_predictor.html#a8c3b7dab21a414add2df89eb9dadbd4b">Predictor</a>
 </li>
 </ul>
 

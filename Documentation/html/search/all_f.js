@@ -1,13 +1,9 @@
 var searchData=
 [
-  ['saveefinfo_193',['saveEFInfo',['../class_predictor.html#ab502d28a5ed1b0dd0e5758f5faec8512',1,'Predictor']]],
-  ['saveinfo_194',['saveInfo',['../class_predictor.html#a349e84c7d115dbbc923de6b5c0238c93',1,'Predictor']]],
-  ['segmentationalgorithmflag_195',['segmentationalgorithmFlag',['../main_8cpp.html#a88cf591c00b5aeec3f2e80556d021338',1,'main.cpp']]],
-  ['selection_196',['selection',['../main_8cpp.html#ad4174319b419e07ce037d1ed891595d8',1,'main.cpp']]],
-  ['selectionslider_197',['selectionSlider',['../main_8cpp.html#ad786496a8f6daf7695b75321f1a41a8a',1,'main.cpp']]],
-  ['selectionslidermax_198',['selectionSliderMax',['../main_8cpp.html#a8ff5d8da62b4488239343713e402ca3d',1,'main.cpp']]],
-  ['showvideo_199',['showVideo',['../main_8cpp.html#a5fb4696151c782051bfc7150fd19cf61',1,'main.cpp']]],
-  ['starttime_200',['startTime',['../main_8cpp.html#aaf564fc30a2a8624cf917e282281a500',1,'main.cpp']]],
-  ['stringify_201',['STRINGIFY',['../_c_make_c_compiler_id_8c.html#a43e1cad902b6477bec893cb6430bd6c8',1,'STRINGIFY():&#160;CMakeCCompilerId.c'],['../_c_make_c_x_x_compiler_id_8cpp.html#a43e1cad902b6477bec893cb6430bd6c8',1,'STRINGIFY():&#160;CMakeCXXCompilerId.cpp']]],
-  ['stringify_5fhelper_202',['STRINGIFY_HELPER',['../_c_make_c_compiler_id_8c.html#a2ae9b72bb13abaabfcf2ee0ba7d3fa1d',1,'STRINGIFY_HELPER():&#160;CMakeCCompilerId.c'],['../_c_make_c_x_x_compiler_id_8cpp.html#a2ae9b72bb13abaabfcf2ee0ba7d3fa1d',1,'STRINGIFY_HELPER():&#160;CMakeCXXCompilerId.cpp']]]
+  ['readbit_193',['readbit',['../class_bit_stream.html#a4accc111a5c1a01d33449549d8cb7507',1,'BitStream']]],
+  ['readefinfo_194',['readEFInfo',['../class_lossy_predictor.html#a259852274adfe60d23e7fa69bd2120c1',1,'LossyPredictor::readEFInfo()'],['../class_predictor.html#af518703d9b96fa1395121035180e4ca4',1,'Predictor::readEFInfo()']]],
+  ['readinfo_195',['readInfo',['../class_lossy_predictor.html#a2c4011a51f72855a3807ff666f2b3376',1,'LossyPredictor::readInfo()'],['../class_predictor.html#a603f4df05fcf596d6ebd913bb694af9c',1,'Predictor::readInfo()']]],
+  ['readnbits_196',['readNbits',['../class_bit_stream.html#a04883bf64d645907c84e986e427dc800',1,'BitStream']]],
+  ['readwrite_197',['ReadWrite',['../class_golomb.html#a52c719b263548f1f71c44a0df49473b3',1,'Golomb::ReadWrite()'],['../class_bit_stream.html#ad65a04094b3a4c0874d1cf1110e1d707',1,'BitStream::readwrite()']]],
+  ['resettrackbars_198',['resetTrackbars',['../main_8cpp.html#a668bb168846a9906cacdfd15e48a0d58',1,'main.cpp']]]
 ];

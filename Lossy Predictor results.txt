@@ -1,0 +1,24 @@
+D:\Desktop\Universidade\CSLP\projeto\videos\ducks_take_off_420_720p50.y4m
+D:\Desktop\Universidade\CSLP\projeto\videos\akiyo_cif.y4m
+before, 	mode, 	image type,searchRadius,blockSize,	nbits,		after, 		avi, 	time
+INTRA
+659 MB,		   8,	    yuv420,        None,     None,	0bits,		432MB,       143 MB, C:7m  2s U:13m  2s
+659 MB,		   8,	    yuv420,        None,     None,	1bits,		351MB,       143 MB, C:7m 49s U:12m 40s
+659 MB,		   8,	    yuv420,        None,     None,	3bits,		259MB,       143 MB, C:6m 43s U:11m 36s
+
+Demasiada perda:
+659 MB,		   8,	    yuv420,        None,     None,	5bits,		247MB,       143 MB, C:8m 28s U:11m 48s
+
+FakePredictor (INTRA OR INTER)
+659 MB,		   8,	    yuv420,	      3,   2^4=16,	0bits,		449MB,	     143 MB, C:36m02s U:5m 06s
+659 MB,		   8,	    yuv420,	      3,   2^4=16,	1bits,		386MB,	     143 MB, C:32m16s U:4m 15s
+659 MB,		   8,	    yuv420,	      3,   2^4=16,	2bits,		334MB,	     143 MB, C:22m55s U:5m 55s
+659 MB,		   8,	    yuv420,	      3,   2^4=16,	3bits,		312MB,	     143 MB, C:19m50s U:6m 19s
+659 MB,		   8,	    yuv420,	      3,   2^4=16,	4bits,		250MB,	     143 MB, C:15m27s U:7m 22s
+
+Demasiada perda:
+659 MB,		   8,	    yuv420,	      3,   2^4=16,	5bits,		247MB,	     143 MB, C:19m13s U:9m 59s
+
+
+ltest1-8-yuv420-None-None-4-250MB-143MB-C: 7m:49s U:10m32s
+ltest2-8-yuv420-  3 - 2^4-4-250MB-143MB-C:20m18s  U: 9m59s

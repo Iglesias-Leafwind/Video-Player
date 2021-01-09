@@ -28,17 +28,17 @@ opencv2/videoio.hpp
 BitStream.h
 D:/Desktop/Universidade/CSLP/projeto/VideoPlayer/BitStream.h
 
-D:/Desktop/Universidade/CSLP/projeto/VideoPlayer/Predictor.cpp
+D:/Desktop/Universidade/CSLP/projeto/VideoPlayer/LossyPredictor.cpp
 iostream
 -
 opencv2/opencv.hpp
 D:/Desktop/Universidade/CSLP/projeto/VideoPlayer/opencv2/opencv.hpp
-Predictor.h
-D:/Desktop/Universidade/CSLP/projeto/VideoPlayer/Predictor.h
+LossyPredictor.h
+D:/Desktop/Universidade/CSLP/projeto/VideoPlayer/LossyPredictor.h
 stdlib.h
 -
 
-D:/Desktop/Universidade/CSLP/projeto/VideoPlayer/Predictor.h
+D:/Desktop/Universidade/CSLP/projeto/VideoPlayer/LossyPredictor.h
 iostream
 -
 stdio.h

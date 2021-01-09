@@ -1,9 +1,10 @@
 var searchData=
 [
-  ['readbit_187',['readbit',['../class_bit_stream.html#a4accc111a5c1a01d33449549d8cb7507',1,'BitStream']]],
-  ['readefinfo_188',['readEFInfo',['../class_predictor.html#af518703d9b96fa1395121035180e4ca4',1,'Predictor']]],
-  ['readinfo_189',['readInfo',['../class_predictor.html#a603f4df05fcf596d6ebd913bb694af9c',1,'Predictor']]],
-  ['readnbits_190',['readNbits',['../class_bit_stream.html#a04883bf64d645907c84e986e427dc800',1,'BitStream']]],
-  ['readwrite_191',['readwrite',['../class_bit_stream.html#ad65a04094b3a4c0874d1cf1110e1d707',1,'BitStream::readwrite()'],['../class_golomb.html#a52c719b263548f1f71c44a0df49473b3',1,'Golomb::ReadWrite()']]],
-  ['resettrackbars_192',['resetTrackbars',['../main_8cpp.html#a668bb168846a9906cacdfd15e48a0d58',1,'main.cpp']]]
+  ['path_186',['path',['../class_golomb.html#a4ce00c3fcea840c2407f2568b07ed734',1,'Golomb']]],
+  ['platform_5fid_187',['PLATFORM_ID',['../_c_make_c_compiler_id_8c.html#adbc5372f40838899018fadbc89bd588b',1,'PLATFORM_ID():&#160;CMakeCCompilerId.c'],['../_c_make_c_x_x_compiler_id_8cpp.html#adbc5372f40838899018fadbc89bd588b',1,'PLATFORM_ID():&#160;CMakeCXXCompilerId.cpp']]],
+  ['predictor_188',['Predictor',['../class_predictor.html',1,'Predictor'],['../class_predictor.html#a7ca38c42bcfea52d4452cbe64a1e9dd1',1,'Predictor::Predictor()']]],
+  ['predictor_2ecpp_189',['Predictor.cpp',['../_predictor_8cpp.html',1,'']]],
+  ['predictor_2eh_190',['Predictor.h',['../_predictor_8h.html',1,'']]],
+  ['prevframe_191',['prevFrame',['../class_lossy_predictor.html#af6668cb2d4a385d11cf9281735c0c1e2',1,'LossyPredictor::prevFrame()'],['../class_predictor.html#ab125a5aff71331a4b52da8e84d980f3e',1,'Predictor::prevFrame()']]],
+  ['prevframef_192',['prevFrameF',['../class_lossy_predictor.html#ade36291d4af7da2ce46636bed81f9938',1,'LossyPredictor::prevFrameF()'],['../class_predictor.html#a131d176971d11c86330263d70835afcf',1,'Predictor::prevFrameF()']]]
 ];

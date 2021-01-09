@@ -3,7 +3,7 @@ project(VideoPlayer)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(VideoPlayer BitStream.cpp Golomb.cpp Predictor.cpp main.cpp)
+add_executable(VideoPlayer BitStream.cpp Golomb.cpp Predictor.cpp LossyPredictor.cpp main.cpp)
 add_compile_options(-xO3)
 
 set(OpenCV_DIR D:\\Programs\\opencv\\opencv\\mingw-build2)
