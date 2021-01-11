@@ -250,6 +250,33 @@ Predictor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\VideoPlayer.dir\build.make CMakeFiles/VideoPlayer.dir/Predictor.cpp.s
 .PHONY : Predictor.cpp.s
 
+jpegPredictor.obj: jpegPredictor.cpp.obj
+
+.PHONY : jpegPredictor.obj
+
+# target to build an object file
+jpegPredictor.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VideoPlayer.dir\build.make CMakeFiles/VideoPlayer.dir/jpegPredictor.cpp.obj
+.PHONY : jpegPredictor.cpp.obj
+
+jpegPredictor.i: jpegPredictor.cpp.i
+
+.PHONY : jpegPredictor.i
+
+# target to preprocess a source file
+jpegPredictor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VideoPlayer.dir\build.make CMakeFiles/VideoPlayer.dir/jpegPredictor.cpp.i
+.PHONY : jpegPredictor.cpp.i
+
+jpegPredictor.s: jpegPredictor.cpp.s
+
+.PHONY : jpegPredictor.s
+
+# target to generate assembly for a file
+jpegPredictor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VideoPlayer.dir\build.make CMakeFiles/VideoPlayer.dir/jpegPredictor.cpp.s
+.PHONY : jpegPredictor.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -298,6 +325,9 @@ help:
 	@echo ... Predictor.obj
 	@echo ... Predictor.i
 	@echo ... Predictor.s
+	@echo ... jpegPredictor.obj
+	@echo ... jpegPredictor.i
+	@echo ... jpegPredictor.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

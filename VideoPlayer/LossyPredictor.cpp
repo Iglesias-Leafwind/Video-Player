@@ -523,7 +523,6 @@ void LossyPredictor::readEFInfo(string path) {
     this->blockSearchRadius = golombo.decode();
     this->blockSize = golombo.decode();
     this->nbits = golombo.decode();
-    golombo.changeM(8);
 }
 
 Mat LossyPredictor::blockFrameRead3Channel(){

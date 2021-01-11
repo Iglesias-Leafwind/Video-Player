@@ -17,6 +17,7 @@ Golomb::Golomb(string path, int m, string readorwrite) {
 	this->ReadWrite.open(path,readorwrite);
 }
 void Golomb::changeM(int m) {
+    //cout << "Prev: " << this->m << " Now: " << m << endl;
 	this->m = m;
 	this->b = ceil(log2(m));
 }

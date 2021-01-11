@@ -1,3 +1,5 @@
+INTRA == so intra coding
+INTER == intra + inter using fake golomb decision
 	a) ducks_take_off
 D:\Desktop\Universidade\CSLP\projeto\videos\ducks_take_off_420_720p50.y4m
 Compression Method:Size before:Size after:Time compressing:Time uncompressing:Bits per pixel;
@@ -5,7 +7,7 @@ INTRA no loss	  :659MB      :432MB     :  08min 06seg   :  11min 51seg     :    
 INTRA loss	  :659MB      :259MB     :  06min 32seg   :  09min 50seg     :    3.002     ;
 INTER no loss	  :659MB      :450MB     :  23min 49seg   :  07min 02seg     :    4.996     ;
 INTER loss	  :659MB      :312MB     :  17min 59seg   :  06min 22seg     :    3.666     ;
-
+				
 	b) in_to_tree
 D:\Desktop\Universidade\CSLP\projeto\videos\in_to_tree_420_720p50.y4m
 Compression Method:Size before:Size after:Time compressing:Time uncompressing:Bits per pixel;
@@ -43,4 +45,3 @@ Image Type 		- yuv420
 Search Radius		- 2
 Block Size		- 16
 Loss number of bits	- 3
-
