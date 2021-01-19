@@ -17,23 +17,17 @@ using namespace std;
 */
 class jpegPredictor {
 private:
+
     /*!Mat luminance
      * used for jpeg quantization and DCT transformation
      */
      Mat luminance;
-    /*!Mat chrominance
-     * used for jpeg quantization and DCT transformation
-     */
-     Mat chrominance;
+
     /*!void changeGolombM(int total)
      * this will use a total number of bits and calculate the best m for golomb to use
      * */
     void changeGolombM(int total);
-    /*! bool rwFlag
-    *   Tells us if it is reading or writing
-    *  starting with 1 == writing
-    */
-    bool rwFlag = 1;
+
     /*! Mat fillZeros(const Mat& channel)
     * given a Mat with a channel it will fill the 1st row and 1st column with zeros
     * for easier future calculation
@@ -50,43 +44,28 @@ private:
     * and will shiftnbits << dependin on nbits determined previously
      * */
     signed int decalculator(vector<signed int> numb);
-    /*! Mat frameRead3Channel()
-    * will read a 3channels frame from bin file
-    */
-    Mat frameRead3Channel();
+
     /*! Mat frameRead1Channel()
     * will read a 1channel frame from bin file
     */
     Mat frameRead1Channel();
-    /*! Mat frameWrite3Channel(const Mat& frame)
-    * will write a 3channels frame into the bin file
-    */
-    Mat frameWrite3Channel(Mat frame);
+
     /*! Mat frameWrite1Channel(const Mat& frame)
     * will write a 1channel frame into the bin file
     */
     Mat frameWrite1Channel(Mat frame);
 
-    /*! Mat blockFrameRead3Channel()
-    * will read a 3channels frame from bin file using blocks
-    */
-    Mat blockFrameRead3Channel();
     /*! Mat blockFrameRead1Channel()
     * will read a 1channel frame from bin file using blocks
     */
     Mat blockFrameRead1Channel();
-    /*! Mat blockFrameWrite3Channel(const Mat& frame)
-    * will write a 3channels frame into the bin file using blocks
-    */
-    Mat blockFrameWrite3Channel(Mat frame);
+
+
     /*! Mat blockFrameWrite1Channel(const Mat& frame)
     * will write a 1channel frame into the bin file using blocks
     */
     Mat blockFrameWrite1Channel(Mat frame);
-    /*! Mat fakePredict3Channel(const Mat& frame)
-     * will check how many bits it is going to use for inter and intra frames
-     * */
-    void fakePredict3Channel(const Mat& frame);
+
     /*! Mat fakePredict1Channel(const Mat& frame)
      * will check how many bits it is going to use for inter and intra frames
      * */
@@ -100,7 +79,13 @@ private:
      * */
     signed int bitsForInter;
 public:
-
+    /*! int quantProblemFlag
+     * this activates the quantization problem that I am having and isn't resolved
+     * probably because of fidning best block after this subtraction quantization saves the new block
+     * and in the next frame i keep using the last frame and keep losing some data afte a while some
+     * pixels become white.
+     */
+     int quantProblemFlag;
     /*! int bpp
      * this is used to know how many bits per pixel we are using encoding a video
      */
@@ -133,11 +118,6 @@ public:
     * for saving or reading quantity of frames
     */
     int videoFrames;
-    /*! string type
-    * this is used for readInfo when extracting video info
-    * for saving or reading a frame type
-    */
-    string type;
     /*! Mat prevFrame
      * this is to save the previous frame for intra frame coding and decoding
      */
@@ -180,30 +160,11 @@ public:
     * and uses path where it will save the encoded file or read the encoded file
     */
     jpegPredictor(int mode);
-    /*! void saveInfo(int h, int w, string type, int fps,int frames,int nbits,string path)
+    /*! void saveEFInfo(int h, int w, string type, int fps,int frames,int blockSearchRadius,int nbits,answer,string path)
     * will save info into the bin file
     * and save it on local variables in this class
     */
-    void saveInfo(int h, int w, string type, int fps,int frames,int nbits,string path);
-    /*! void readInfo(string path)
-    * will read info from the bin file
-    * and save it on local variables in this class
-    */
-    void readInfo(string path);
-    /*! void encode(const Mat& frame)
-    * here we have the encode function that with a frame it will choose if it has 3 channels or 1 and convert each channel using the selected mode and write in the bin file
-    */
-    void encode(const Mat& frame);
-    /*! Mat decode(void)
-    * here we have the decode function that with the bin file it will read a frame and convert into a single Mat
-    */
-    Mat decode();
-
-    /*! void saveEFInfo(int h, int w, string type, int fps,int frames,int blockSearchRadius,int nbits,string path)
-    * will save info into the bin file
-    * and save it on local variables in this class
-    */
-    void saveEFInfo(int h, int w, string type, int fps,int frames,int blockSearchRadius,int blockSize,int nbits,string path);
+    void saveEFInfo(int h, int w, int fps,int frames,int blockSearchRadius,int nbits,int answer,string path);
     /*! void readInfo()
     * will read info from the bin file
     * and save it on local variables in this class
@@ -220,17 +181,6 @@ public:
     */
     Mat decodeA();
 
-
-    /*! void encodeEF(const Mat& frame)
-    * here we have the encode function that with a frame it will divide into blocks
-    * and using previous frame it will find the block difference with the least value
-    * and code that diff block
-    */
-    void encodeEF(const Mat& frame);
-    /*! Mat decodeEF()
-    * here we have the decode function that with the bin file it will read a frame through its blocks and convert into a single Mat
-    */
-    Mat decodeEF();
     /*! double getbpp()
      * this will calculate bits per pixel used on this coded video
      */

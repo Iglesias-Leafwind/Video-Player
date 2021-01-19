@@ -1809,21 +1809,10 @@ void editMenu() {
             cout << hours << ":" << int(minutes % 60) << ":" << int(seconds % 60) << endl;
         }
         else if (hoption == "jpegr") {
-            cout << "Please input the yuv type(1-yuv444,2-yuv422,3-yuv420): ";
-            string yuvType = "";
-            getline(cin, yuvType);
-            if (yuvType == "2") {
-                cout << "Selected yuv422!" << endl;
-                yuvType = "4:2:2";
-            }
-            else if (yuvType == "3") {
-                cout << "Selected yuv420!" << endl;
-                yuvType = "4:2:0";
-            }
-            else {
-                cout << "Selected yuv444!" << endl;
-                yuvType = "4:4:4";
-            }
+            cout << "Want with quantization problem yes or no ( 1 / 0 ): ";
+            string answer = "";
+            getline(cin, answer);
+            int answer2 = stoi(answer);
             cout << "Please input the scan size: ";
             string scanSize = "";
             getline(cin, scanSize);
@@ -1863,14 +1852,14 @@ void editMenu() {
                     int frames = inputVideo.get(CAP_PROP_FRAME_COUNT);
                     int frameqty = 1;
                     jpegPredictor predict(mode);
-                    predict.saveEFInfo(frame_height, frame_width, yuvType, fps, frames, scanning,8,nbits,binF);
+                    predict.saveEFInfo(frame_height, frame_width, fps, frames, scanning, nbits, answer2, binF);
                     while (1) {
                         // Capture frame-by-frame
                         inputVideo >> frame;
                         // If the frame is empty, break immediately
                         if (frame.empty())
                             break;
-                        Mat yuvFrame = customBGR2YUV(frame, yuvType);
+                        Mat yuvFrame = customBGR2YUV(frame, "4:2:0");
                         predict.encodeA(yuvFrame);
                         if (frameqty % 5 == 0) {
                             endTime = time(0);
@@ -1911,7 +1900,6 @@ void editMenu() {
             int frame_width = predict2.videoWidth;
             int frame_height = predict2.videoHeight;
             int fps = predict2.videoFPS;
-            string yuvType = predict2.type;
             cout << "Please input the name of the video file (saving as .avi): ";
             string videoF = "";
             getline(cin, videoF);
@@ -1929,7 +1917,7 @@ void editMenu() {
                 // If the frame is empty, break immediately
                 if (frame.empty())
                     break;
-                Mat BGRFrame = customYUV2BGR(frame, yuvType);
+                Mat BGRFrame = customYUV2BGR(frame, "4:2:0");
                 /*imshow("frame",BGRFrame);
                 char c=(char)waitKey(1);
                 if(c==27)

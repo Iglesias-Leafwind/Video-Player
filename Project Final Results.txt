@@ -1,5 +1,13 @@
 INTRA == so intra coding
 INTER == intra + inter using fake golomb decision
+	Params used:
+Compression Mode	- Non Linear
+Image Type 		- yuv420
+Search Radius		- 2
+Block Size		- 16
+Loss number of bits	- 3
+golomb m value 		- dynamic
+
 	a) ducks_take_off
 D:\Desktop\Universidade\CSLP\projeto\videos\ducks_take_off_420_720p50.y4m
 Compression Method:Size before:Size after:Time compressing:Time uncompressing:Bits per pixel;
@@ -7,14 +15,65 @@ INTRA no loss	  :659MB      :432MB     :  08min 06seg   :  11min 51seg     :    
 INTRA loss	  :659MB      :259MB     :  06min 32seg   :  09min 50seg     :    3.002     ;
 INTER no loss	  :659MB      :450MB     :  23min 49seg   :  07min 02seg     :    4.996     ;
 INTER loss	  :659MB      :312MB     :  17min 59seg   :  06min 22seg     :    3.666     ;
-				
+Intra loss graph stats:
+nbits   |0    |1     |2     |3    |4    |5    |6    |7    |8    |
+size  MB|432  |351   |286   |259  |250  |247  |247  |247  |247  |
+time Enc|7m9s |6m50s |7m36s |7m16s|5m18s|5m3s |4m58s|4m52s|4m50s|
+time Dec|9m59s|10m47s|10m55s|9m43s|7m20s|7m14s|7m7s |7m9s |6m51s|
+Qualidad|good |good  |good  |good |acept|acept|bad  |bad  |bad  |
+INTER loss graph stats:
+nbits   |0     |1     |2     |3    |4     |5    |6    |7    |8    |
+size  MB|450   |388   |335   |312  |250   |247  |247  |247  |247  |
+time Enc|14m57s|14m23s|12m53s|12m3s|10m13s|10m1s|9m57s|9m54s|9m48s|
+time Dec|4m23s |4m1s  |4m47s |5m5s |5m54s |5m48s|5m44s|5m41s|5m33s|
+Qualidad|good  |good  |good  |acept|acept |acept|bad  |bad  |bad  |
+Quantization JPEG:
+nbits   |0     |1     |2     |3     |
+size  MB|421   |357   |301   |259   |
+time Enc|28m1s |29m10s|29m47s|26m32s|
+time Dec|12m41s|15m51s|11m46s|17m45s|
+bpp	|4,832 |3,970 |3,262 |3,004 |
+No Quantizat JPEG:
+nbits   |0     |1     |2     |3     |
+size  MB|432   |351   |287   |259   |
+time Enc|12m27s|11m56s|11m29s|11m12s|
+time Dec|7m33s |7m0s  |6m28s |6m0s  |
+bpp	|4,808 |3,816 |3,004 |3,004 |
+Qualidad|good  |good  |good  |good  |
+
 	b) in_to_tree
 D:\Desktop\Universidade\CSLP\projeto\videos\in_to_tree_420_720p50.y4m
 Compression Method:Size before:Size after:Time compressing:Time uncompressing:Bits per pixel;
 INTRA no loss	  :659MB      :400MB     :  06min 30seg   :  09min 23seg     :    4.228     ;
 INTRA loss	  :659MB      :253MB     :  05min 12seg   :  06min 30seg     :    3.002     ;
 INTER no loss	  :659MB      :391MB     :  17min 34seg   :  04min 58seg     :    4.178     ;
-INTER loss	  :659MB      :269MB     :  13min 33seg   :  07min 03seg     :    3.122     ;
+INTER loss	  :659MB      :263MB     :  13min 33seg   :  07min 03seg     :    3.122     ;
+Intra loss graph stats:
+nbits   |0    |1    |2    |3    |4    |5    |6    |7    |8    |
+size  MB|400  |320  |272  |253  |248  |247  |247  |247  |247  |
+time Enc|6m23s|6m17s|5m22s|5m10s|5m42s|5m21s|4m54s|4m55s|5m57s|
+time Dec|9m0s |8m48s|7m38s|7m37s|7m45s|8m28s|7m8s |7m7s |6m46s|
+Qualidad|good |good |good |good |acept|acept|bad  |bad  |bad  |
+INTER loss graph stats:
+nbits   |0     |1     |2     |3     |4     |5    |6     |7     |8     |
+size  MB|382   |326   |290   |263   |248   |247  |247   |247   |247   |
+time Enc|14m29s|14m10s|12m54s|11m23s|12m15s|11m3s|11m22s|11m23s|11m10s|
+time Dec|3m55s |3m29s |4m49s |7m0s  |7m4s  |7m2s |6m33s |6m33s |6m21s |
+Qualidad|good  |good  |good  |acept |acept |bad  |bad   |bad   |bad   |
+Quantization JPEG:
+nbits   |0     |1     |2     |3     |
+size  MB|373   |320   |272   |253   |
+time Enc|26m24s|16m14s|12m55s|11m48s|
+time Dec|7m59s |4m55s |6m43s |5m59s |
+bpp	|4,186 |3,426 |3,004 |3,004 |
+No Quantizat JPEG:
+nbits   |0     |1    |2     |3     |
+size  MB|400   |320  |272   |253   |
+time Enc|12m36s|12m7s|13m17s|13m37s|
+time Dec|7m35s |7m2s |6m51s |7m28s |
+bpp	|4,230 |3,266|3,004 |3,004 |
+Qualidad|good  |good |good  |good  |
+
 
 	c) old_town_cross
 D:\Desktop\Universidade\CSLP\projeto\videos\old_town_cross_420_720p50.y4m
@@ -23,6 +82,32 @@ INTRA no loss	  :659MB      :384MB     :  06min 13seg   :  09min 12seg     :    
 INTRA loss	  :659MB      :252MB     :  05min 22seg   :  07min 44seg     :    3.002     ;
 INTER no loss	  :659MB      :363MB     :  17min 52seg   :  04min 47seg     :    4.000     ;
 INTER loss	  :659MB      :252MB     :  12min 48seg   :  07min 23seg     :    3.002     ;
+Intra loss graph stats:
+nbits   |0    |1    |2    |3    |4    |5    |6    |7    |8    |
+size  MB|384  |303  |266  |252  |248  |247  |247  |247  |247  |
+time Enc|7m7s |4m41s|4m22s|4m8s |4m1s |3m58s|3m57s|3m55s|3m55s|
+time Dec|7m37s|6m32s|6m8s |5m55s|5m48s|5m45s|5m43s|5m41s|5m36s|
+Qualidad|good |good |good |acept|acept|bad  |bad  |bad  |bad  |
+INTER loss graph stats:
+nbits   |0     |1     |2     |3     |4     |5     |6     |7    |8    |
+size  MB|363   |296   |279   |248   |247   |247   |247   |247  |247  |
+time Enc|16m16s|14m20s|13m35s|10m32s|10m28s|10m18s|10m12s|10m7s|10m4s|
+time Dec|3m48s |3m15s |3m38s |6m1s  |6m10s |5m56s |5m50s |5m51s|5m42s|
+Qualidad|good  |good  |good  |acept |bad   |bad   |bad   |bad  |bad  |
+Quantization JPEG:
+nbits   |0     |1     |2     |3     |
+size  MB|359   |307   |266   |252   |
+time Enc|16m12s|14m48s|11m13s|10m59s|
+time Dec|3m59s |4m19s |6m5s  |5m55s |
+bpp	|3,994 |3,250 |3,004 |3,004 |
+No Quantizat JPEG:
+nbits   |0     |1     |2     |3     |
+size  MB|384   |304   |266   |252   |
+time Enc|15m13s|16m13s|16m43s|16m25s|
+time Dec|9m22s |9m56s |9m3s  |9m1s  |
+bpp	|4,002 |3,004 |3,004 |3,004 |
+Qualidad|good  |good  |good  |good  |
+
 
 	d) park_joy
 D:\Desktop\Universidade\CSLP\projeto\videos\park_joy_444_720p50.y4m
@@ -31,6 +116,32 @@ INTRA no loss	  :1280MB     :501MB     :  07min 09seg   :  10min 08seg     :    
 INTRA loss	  :1280MB     :278MB     :  05min 12seg   :  07min 41seg     :    3.002     ;
 INTER no loss	  :1280MB     :475MB     :  17min 49seg   :  05min 25seg     :    5.218     ;
 INTER loss	  :1280MB     :343MB     :  15min 58seg   :  05min 57seg     :    3.972     ;
+Intra loss graph stats:
+nbits   |0    |1    |2    |3    |4    |5    |6    |7    |8    |
+size  MB|489  |407  |327  |278  |257  |249  |247  |247  |247  |
+time Enc|5m44s|5m11s|4m46s|4m27s|4m14s|4m8s |4m1s |3m59s|3m67s|
+time Dec|7m52s|7m17s|6m42s|6m16s|6m1s |5m54s|5m49s|5m44s|5m33s|
+Qualidad|good |good |good |good |acept|bad  |bad  |bad  |bad  |
+INTER loss graph stats:
+nbits   |0     |1     |2     |3    |4     |5     |6     |7     |8    |
+size  MB|475   |425   |365   |343  |322   |249   |247   |247   |247  |
+time Enc|15m36s|15m16s|13m36s|13m7s|12m27s|10m27s|10m20s|10m14s|10m5s|
+time Dec|4m35s |4m11s |4m59s |5m2s |5m14s |6m1s  |5m58s |5m53s |5m42s|
+Qualidad|good  |good  |acept |bad  |bad   |bad   |bad   |bad   |bad  |
+Quantization JPEG:
+nbits   |0     |1     |2     |3     |
+size  MB|446   |427   |352   |278   |
+time Enc|16m49s|16m12s|14m11s|11m20s|
+time Dec|4m39s |5m3s  |5m17s |6m15s |
+bpp	|5,148 |4,908 |3,916 |3,004 |
+No Quantizat JPEG:
+nbits   |0     |1     |2     |3     |
+size  MB|489   |407   |327   |278   |
+time Enc|18m17s|17m48s|16m13s|13m30s|
+time Dec|13m53s|9m19s |8m28s |6m55s |
+bpp	|5,488 |4,496 |3,532 |3,004 |
+Qualidad|good  |good  |good  |good  |
+
 	eu) akiyo_cif
 D:\Desktop\Universidade\CSLP\projeto\videos\akiyo_cif.y4m
 Compression Method:Size before:Size after:Time compressing:Time uncompressing:Bits per pixel;
@@ -38,10 +149,32 @@ INTRA no loss	  :43.5MB     :20.2MB    :  00min 20seg   :  00min 29seg     :    
 INTRA loss	  :43.5MB     :16.5MB    :  00min 21seg   :  00min 28seg     :    3.003     ;
 INTER no loss	  :43.5MB     :17.3MB    :  00min 44seg   :  00min 13seg     :    3.003     ;
 INTER loss	  :43.5MB     :16.4MB    :  01min 00seg   :  00min 12seg     :    3.003     ;
+INTRA loss graph stats:
+nbits   |0   |1   |2   |3   |4   |5   |6   |7   |8   |
+size  MB|20,2|17,8|16,8|16,5|16,3|16,3|16,3|16,3|16,3|
+time Enc|23s |22s |21s |22s |21s |20s |20s |20s |20s |
+time Dec|33s |31s |30s |29s |30s |29s |28s |28s |27s |
+Qualidad|good|good|good|good|bad |bad |bad |bad |bad |
+INTER loss graph stats:
+nbits   |0   |1   |2   |3   |4   |5   |6   |7   |8   |
+size  MB|17,3|16,7|16,5|16,4|16,3|16,3|16,3|16,3|16,3|
+time Enc|38s |54s |55s |53s |40s |39s |40s |40s |39s |
+time Dec|11s |10s |11s |10s |24s |23s |23s |23s |23s |
+Qualidad|good|good|good|good|bad |bad |bad |bad |bad |
+Quantization JPEG:
+nbits   |0    |1    |2    |3    |
+size  MB|19,5 |17,8 |16,8 |16,5 |
+time Enc|44s  |44s  |44s  |43s  |
+time Dec|14s  |24s  |23s  |22s  |
+bpp	|3,007|3,007|3,007|3,007|
+No Quantizat JPEG:
+nbits   |0    |1    |2    |3    |
+size  MB|20,2 |17,8 |16,8 |16,5 |
+time Enc|37s  |47s  |46s  |46s  |
+time Dec|29s  |26s  |25s  |24s  |
+bpp	|3,007|3,007|3,007|3,007|
+Qualidad|good |good |good |good |
 
-	Params used:
-Compression Mode	- Non Linear
-Image Type 		- yuv420
-Search Radius		- 2
-Block Size		- 16
-Loss number of bits	- 3
+The problem that I am having with JPEG quantization is that because I use a division, after DCT of the diff block, using luminance mat 
+and saving that as my current frame to use as prevFrame for the next frame so each frame I lose a little bit of information
+and I keep loosing it until I get white squares. That is what I think it is happening.
