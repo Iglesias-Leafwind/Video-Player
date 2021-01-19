@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['totalpixeis_445',['totalPixeis',['../class_lossy_predictor.html#a1eb7171793d0480f3aa83ec4d9d6045e',1,'LossyPredictor']]],
-  ['type_446',['type',['../class_lossy_predictor.html#a2851951815996ee3c1e5b081455734fb',1,'LossyPredictor::type()'],['../class_predictor.html#afd18f670541a398a0f32e3bb05135987',1,'Predictor::type()']]]
+  ['segmentationalgorithmflag_449',['segmentationalgorithmFlag',['../main_8cpp.html#a88cf591c00b5aeec3f2e80556d021338',1,'main.cpp']]],
+  ['selection_450',['selection',['../main_8cpp.html#ad4174319b419e07ce037d1ed891595d8',1,'main.cpp']]],
+  ['selectionslider_451',['selectionSlider',['../main_8cpp.html#ad786496a8f6daf7695b75321f1a41a8a',1,'main.cpp']]],
+  ['selectionslidermax_452',['selectionSliderMax',['../main_8cpp.html#a8ff5d8da62b4488239343713e402ca3d',1,'main.cpp']]],
+  ['starttime_453',['startTime',['../main_8cpp.html#aaf564fc30a2a8624cf917e282281a500',1,'main.cpp']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['readwrite_439',['ReadWrite',['../class_golomb.html#a52c719b263548f1f71c44a0df49473b3',1,'Golomb::ReadWrite()'],['../class_bit_stream.html#ad65a04094b3a4c0874d1cf1110e1d707',1,'BitStream::readwrite()']]]
+  ['quantproblemflag_447',['quantProblemFlag',['../classjpeg_predictor.html#a8286a41b9c355682497dbd3670de09fe',1,'jpegPredictor']]]
 ];

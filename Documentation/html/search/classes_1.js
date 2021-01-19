@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['golomb_235',['Golomb',['../class_golomb.html',1,'']]]
+  ['golomb_239',['Golomb',['../class_golomb.html',1,'']]]
 ];

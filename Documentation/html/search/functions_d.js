@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['testes_289',['testes',['../_golomb_8cpp.html#ad1a3ee9646261a3dbf148a0450b549dd',1,'Golomb.cpp']]],
-  ['tests_290',['tests',['../_bit_stream_8cpp.html#a0040b31a2648820e75882b52c2790efa',1,'BitStream.cpp']]],
-  ['turnaround_291',['turnaround',['../class_golomb.html#a8b66cbde935f91d93800e548245d48c2',1,'Golomb']]]
+  ['saveefinfo_294',['saveEFInfo',['../classjpeg_predictor.html#abe77373fa61e4bfd1168ef0af5355429',1,'jpegPredictor::saveEFInfo()'],['../class_lossy_predictor.html#ae5b486782e71882306d53fcad27bcfe8',1,'LossyPredictor::saveEFInfo()'],['../class_predictor.html#ab502d28a5ed1b0dd0e5758f5faec8512',1,'Predictor::saveEFInfo()']]],
+  ['saveinfo_295',['saveInfo',['../class_lossy_predictor.html#a05204a2e27125bc58e0a9f5933463cf0',1,'LossyPredictor::saveInfo()'],['../class_predictor.html#a349e84c7d115dbbc923de6b5c0238c93',1,'Predictor::saveInfo()']]],
+  ['showvideo_296',['showVideo',['../main_8cpp.html#a5fb4696151c782051bfc7150fd19cf61',1,'main.cpp']]]
 ];

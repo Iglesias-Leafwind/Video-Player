@@ -10,11 +10,11 @@ var searchData=
   ['general3slidermax_153',['general3SliderMax',['../main_8cpp.html#a6f90f444711b0686fb3e616afccafa8d',1,'main.cpp']]],
   ['generalslider_154',['generalSlider',['../main_8cpp.html#a1cf9b6e1cfedbf754a9e57a8c92ecb89',1,'main.cpp']]],
   ['generalslidermax_155',['generalSliderMax',['../main_8cpp.html#a991bd084007169f4b449b4434b303939',1,'main.cpp']]],
-  ['getbpp_156',['getbpp',['../class_lossy_predictor.html#a9522df9357370608786ab7bdcee5e0e1',1,'LossyPredictor']]],
+  ['getbpp_156',['getbpp',['../classjpeg_predictor.html#af4fd76b3574d571130146eedede488ab',1,'jpegPredictor::getbpp()'],['../class_lossy_predictor.html#a9522df9357370608786ab7bdcee5e0e1',1,'LossyPredictor::getbpp()']]],
   ['golomb_157',['Golomb',['../class_golomb.html',1,'Golomb'],['../class_golomb.html#aa6103d56ebec9decc11a69bf6be83208',1,'Golomb::Golomb()'],['../class_golomb.html#a715efee2a47c145815f78e643c293be2',1,'Golomb::Golomb(string path, int m, string readorwrite)']]],
   ['golomb_2ecpp_158',['Golomb.cpp',['../_golomb_8cpp.html',1,'']]],
   ['golomb_2eh_159',['Golomb.h',['../_golomb_8h.html',1,'']]],
-  ['golombo_160',['golombo',['../class_lossy_predictor.html#a02636b989e6caa22a9c7885671b8d077',1,'LossyPredictor::golombo()'],['../class_predictor.html#ad7e5da332e03ddd3f7e01f53e672e526',1,'Predictor::golombo()']]],
+  ['golombo_160',['golombo',['../classjpeg_predictor.html#a098c298904dad39a48b27c52e02bed0e',1,'jpegPredictor::golombo()'],['../class_lossy_predictor.html#a02636b989e6caa22a9c7885671b8d077',1,'LossyPredictor::golombo()'],['../class_predictor.html#ad7e5da332e03ddd3f7e01f53e672e526',1,'Predictor::golombo()']]],
   ['gradientsflag_161',['gradientsFlag',['../main_8cpp.html#a82eca8156b1086640b039ed70bd94bac',1,'main.cpp']]],
   ['grayscaleflag_162',['grayscaleFlag',['../main_8cpp.html#a834e6d6a600364874826b9d518acd913',1,'main.cpp']]]
 ];

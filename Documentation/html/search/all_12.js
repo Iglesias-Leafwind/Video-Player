@@ -1,9 +1,13 @@
 var searchData=
 [
-  ['version_215',['version',['../link_8txt.html#a7208ba8c7d151799c4e0a36c07f0e70b',1,'link.txt']]],
-  ['videofps_216',['videoFPS',['../class_lossy_predictor.html#a54965602a41fc7e1dc8eadd57e71447b',1,'LossyPredictor::videoFPS()'],['../class_predictor.html#a63cb2bc1f9a6942a5adb3ecdba973ca9',1,'Predictor::videoFPS()']]],
-  ['videoframes_217',['videoFrames',['../class_lossy_predictor.html#a33482c6745a576dd5b6d6f5a39e8f3c6',1,'LossyPredictor::videoFrames()'],['../class_predictor.html#adfe9b128692de97678de0bfc9056e172',1,'Predictor::videoFrames()']]],
-  ['videoheight_218',['videoHeight',['../class_lossy_predictor.html#affe8ecc979ab9f2798a4b362328a4f81',1,'LossyPredictor::videoHeight()'],['../class_predictor.html#a9a690a13571815284c94f61ce34ad81f',1,'Predictor::videoHeight()']]],
-  ['videopath_219',['videoPath',['../main_8cpp.html#a0df2acae8a5514d1b3128895fa6138f3',1,'main.cpp']]],
-  ['videowidth_220',['videoWidth',['../class_lossy_predictor.html#a3cdd9029172d1c2c101ef1c3b6ad3e37',1,'LossyPredictor::videoWidth()'],['../class_predictor.html#a8c3b7dab21a414add2df89eb9dadbd4b',1,'Predictor::videoWidth()']]]
+  ['saveefinfo_203',['saveEFInfo',['../classjpeg_predictor.html#abe77373fa61e4bfd1168ef0af5355429',1,'jpegPredictor::saveEFInfo()'],['../class_lossy_predictor.html#ae5b486782e71882306d53fcad27bcfe8',1,'LossyPredictor::saveEFInfo()'],['../class_predictor.html#ab502d28a5ed1b0dd0e5758f5faec8512',1,'Predictor::saveEFInfo()']]],
+  ['saveinfo_204',['saveInfo',['../class_lossy_predictor.html#a05204a2e27125bc58e0a9f5933463cf0',1,'LossyPredictor::saveInfo()'],['../class_predictor.html#a349e84c7d115dbbc923de6b5c0238c93',1,'Predictor::saveInfo()']]],
+  ['segmentationalgorithmflag_205',['segmentationalgorithmFlag',['../main_8cpp.html#a88cf591c00b5aeec3f2e80556d021338',1,'main.cpp']]],
+  ['selection_206',['selection',['../main_8cpp.html#ad4174319b419e07ce037d1ed891595d8',1,'main.cpp']]],
+  ['selectionslider_207',['selectionSlider',['../main_8cpp.html#ad786496a8f6daf7695b75321f1a41a8a',1,'main.cpp']]],
+  ['selectionslidermax_208',['selectionSliderMax',['../main_8cpp.html#a8ff5d8da62b4488239343713e402ca3d',1,'main.cpp']]],
+  ['showvideo_209',['showVideo',['../main_8cpp.html#a5fb4696151c782051bfc7150fd19cf61',1,'main.cpp']]],
+  ['starttime_210',['startTime',['../main_8cpp.html#aaf564fc30a2a8624cf917e282281a500',1,'main.cpp']]],
+  ['stringify_211',['STRINGIFY',['../_c_make_c_compiler_id_8c.html#a43e1cad902b6477bec893cb6430bd6c8',1,'STRINGIFY():&#160;CMakeCCompilerId.c'],['../_c_make_c_x_x_compiler_id_8cpp.html#a43e1cad902b6477bec893cb6430bd6c8',1,'STRINGIFY():&#160;CMakeCXXCompilerId.cpp']]],
+  ['stringify_5fhelper_212',['STRINGIFY_HELPER',['../_c_make_c_compiler_id_8c.html#a2ae9b72bb13abaabfcf2ee0ba7d3fa1d',1,'STRINGIFY_HELPER():&#160;CMakeCCompilerId.c'],['../_c_make_c_x_x_compiler_id_8cpp.html#a2ae9b72bb13abaabfcf2ee0ba7d3fa1d',1,'STRINGIFY_HELPER():&#160;CMakeCXXCompilerId.cpp']]]
 ];

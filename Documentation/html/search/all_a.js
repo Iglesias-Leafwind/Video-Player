@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['link_2etxt_172',['link.txt',['../link_8txt.html',1,'']]],
-  ['lossypredictor_173',['LossyPredictor',['../class_lossy_predictor.html',1,'LossyPredictor'],['../class_lossy_predictor.html#a98002516c9ae36d745b787b944cd03f4',1,'LossyPredictor::LossyPredictor()']]],
-  ['lossypredictor_2ecpp_174',['LossyPredictor.cpp',['../_lossy_predictor_8cpp.html',1,'']]],
-  ['lossypredictor_2eh_175',['LossyPredictor.h',['../_lossy_predictor_8h.html',1,'']]]
+  ['jpegpredictor_172',['jpegPredictor',['../classjpeg_predictor.html',1,'jpegPredictor'],['../classjpeg_predictor.html#a91c7e8c3d60752b67fefeaf646a96c6d',1,'jpegPredictor::jpegPredictor()']]],
+  ['jpegpredictor_2ecpp_173',['jpegPredictor.cpp',['../jpeg_predictor_8cpp.html',1,'']]],
+  ['jpegpredictor_2eh_174',['jpegPredictor.h',['../jpeg_predictor_8h.html',1,'']]]
 ];
